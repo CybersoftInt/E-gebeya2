@@ -1,0 +1,96 @@
+.navbar{
+    height: 20px;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+    font-weight: 500;
+    gap: 48px;
+    font-family: "Poppins";
+
+    
+}
+.brand-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand-logo img{
+    height: 40px;
+}
+.navbar span {
+    width: max-content;
+    color: black;
+    font-weight: bold;
+    font-size: 24px;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin-left: 50px;
+    justify-content: center;
+    gap: 20px;
+    font-size: 16px;
+    font-weight: 400;
+
+}
+
+.nav-search{
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.navbar input{
+    display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+width: 25vw;
+height: 30px;
+border: none;
+
+/* Secondary */
+background: #F5F5F5;
+border-radius: 4px;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.search-icon{
+    /* Component 2 */
+
+width: 24px;
+height: 24px;
+
+flex: none;
+order: 1;
+flex-grow: 0;
+
+}
+.wish_cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.wish_cart img{
+    width: 24px;
+    height: 24px;
+}
