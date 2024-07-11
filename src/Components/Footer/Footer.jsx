@@ -7,10 +7,10 @@ function Footer() {
     <div className="footer">
       <div className="footer_content">
         <div className="subscribe">
-            <h2>E-Gebeya</h2>
-            <h3>Subscribe</h3>
-            <p>Get 10% off your first order</p>
-            <input type="email" placeholder="Enter Your email"/>
+          <h2>E-Gebeya</h2>
+          <h3>Subscribe</h3>
+          <p>Get 10% off your first order</p>
+          <input type="email" placeholder="Enter Your email" />
         </div>
         <div className="support">
           <h3>Support</h3>
@@ -34,7 +34,7 @@ function Footer() {
         <div className="support">
           <h3>Quick Link </h3>
           <ul>
-            <li>privacy policy</li>
+            <li>Privacy Policy</li>
             <li>Terms of Use</li>
             <li>FAQ</li>
             <li>Contact</li>
