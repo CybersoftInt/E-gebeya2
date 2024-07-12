@@ -14,14 +14,20 @@ function Wishlist() {
             <div className="discount">
               <p>35%</p>
             </div>
+            <div className="delete">
+              {/* <img src="" alt="delete" /> */}
+
+            </div>
             <div className="wishimg">
               {/* <img src="" alt="huge bag" /> */}
             </div>
-            <div className="delete">
-              <img src="" alt="delete" />
+            <button>Add to Cart</button>
+            <div className="par">
+              <p className="p1">Playstation Joystick</p>
+              <p className="p2">590 <span>1000</span></p>
             </div>
 
-            <button>Add to Cart</button>
+
           </div>
 
           {/* <div>
@@ -38,10 +44,11 @@ function Wishlist() {
               {/* <img src="" alt="huge bag" /> */}
             </div>
             <div className="delete">
-              <img src="" alt="delete" />
+              {/* <img src="" alt="delete" /> */}
             </div>
 
             <button>Add to Cart</button>
+            <p>590</p>
           </div>
 
         </div>
@@ -54,7 +61,7 @@ function Wishlist() {
               {/* <img src="" alt="huge bag" /> */}
             </div>
             <div className="delete">
-              <img src="" alt="delete" />
+              {/* <img src="" alt="delete" /> */}
             </div>
 
             <button>Add to Cart</button>
@@ -69,7 +76,7 @@ function Wishlist() {
               {/* <img src="" alt="huge bag" /> */}
             </div>
             <div className="delete">
-              <img src="" alt="delete" />
+              {/* <img src="" alt="delete" /> */}
             </div>
 
             <button>Add to Cart</button>
