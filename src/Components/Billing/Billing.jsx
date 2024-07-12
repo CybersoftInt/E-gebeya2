@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Billing.css"
+import Bill_item from '../Bill Items/Bill_item'
 function Billing() {
     return (
         <div className='bill'>
@@ -16,18 +17,40 @@ function Billing() {
             </div >
             <div className="bill_body">
                 <div className="bill_form">
+                    <form action="">
+                        <label for="name">First Name</label>
+                        <input type='name'/><br/>
+
+                        <label for="name">First Name</label>
+                        <input type='name'/>
+                        <br/>
+                        <label for="name">First Name</label>
+                        <input type='name'/>
+                        <br/>
+                        <label for="name">First Name</label>
+                        <input type='name'/>
+                        <br/>
+                        <label for="name">First Name</label>
+                        <input type='name'/>
+                    </form>
                 
                 </div>
-                <div className="bill_summary">
-                <div className="bill_items">
-                <img/><span>LCD Monitor</span>
-                <h3>$650</h3>
-                <img/><span>LCD Monitor</span>
-                <h3>$650</h3>
+                  <div className="bill_summary">
+                <Bill_item/>
+                <Bill_item/>
+                
+               <div className="total">
+               <p>Subtotal</p><span>$1750</span>                
+               </div>
+               <div className="total">
+               <p>Shipping</p><span>free</span>
+               </div>
+               <div className="coupon">
+                    <input type='text' placeholder='Coupon Code'/>
+                    <button>Apply Coupon</button>
+                    </div>
                 </div>
-                <p>Subtotal</p><span>$1750</span>
 
-                </div>
 
             </div>
 

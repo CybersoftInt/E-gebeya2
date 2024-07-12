@@ -18,7 +18,7 @@ function Footer() {
         <div className="support">
           <h3>Support</h3>
           <ul>
-            <li> Yabets and Henock,</li>
+            <li> Yabets and Henok,</li>
             <li>Addis Ababa, Ethiopia</li>
             <li>@eGebeya@gmail.com</li>
             <li>+251-976-678-541</li>
@@ -31,7 +31,7 @@ function Footer() {
             <li>Login / Register</li>
             <li>Cart</li>
             <li>Wishlist</li>
-            {/* <li>Shop</li> */}
+            <li>Shop</li>
           </ul>
         </div>
         <div className="support">
