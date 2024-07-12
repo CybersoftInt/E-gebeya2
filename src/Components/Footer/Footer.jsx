@@ -2,11 +2,14 @@ import React from "react";
 import "../Footer/Footer.css";
 import insta from '../Assets/instagram-logo.png'
 import fb from '../Assets/facebook-logo.png'
+import linked from '../Assets/linkedin-logo.png'
+import tweeter from '../Assets/twitter-logo.png'
+
 function Footer() {
   return (
     <div className="footer">
       <div className="footer_content">
-        <div className="subscribe">
+        <div className="support">
           <h2>E-Gebeya</h2>
           <h3>Subscribe</h3>
           <p>Get 10% off your first order</p>
@@ -44,9 +47,9 @@ function Footer() {
           <h3> Follow us on socials </h3>
           <ul>
             <li><img src={fb}></img></li>
-            <li>twr</li>
-            <li>in</li>
-            <li>li</li>
+            <li><img src={insta}></img></li>
+            <li><img src={linked}></img></li>
+            <li><img src={tweeter}></img></li>
           </ul>
         </div>
       </div>

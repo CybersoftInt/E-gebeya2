@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <Billing/>
       <Footer />
     </div>
   );

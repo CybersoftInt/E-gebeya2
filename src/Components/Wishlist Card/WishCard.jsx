@@ -2,7 +2,9 @@ import React from 'react'
 
 function WishCard() {
   return (
-    <div>WishCard</div>
+    <div>
+      
+    </div>
   )
 }
 
