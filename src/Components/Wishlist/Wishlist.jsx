@@ -30,10 +30,7 @@ function Wishlist() {
 
           </div>
 
-          {/* <div>
-            <p>Gucci Bag</p>
-            <p>$960</p>
-          </div> */}
+
         </div>
         <div className="wishlist">
           <div className="wishlist-items">
@@ -48,7 +45,10 @@ function Wishlist() {
             </div>
 
             <button>Add to Cart</button>
-            <p>590</p>
+            <div className="par">
+              <p className="p1">Playstation Joystick</p>
+              <p className="p2">590 <span>1000</span></p>
+            </div>
           </div>
 
         </div>
@@ -65,6 +65,10 @@ function Wishlist() {
             </div>
 
             <button>Add to Cart</button>
+            <div className="par">
+              <p className="p1">Playstation Joystick</p>
+              <p className="p2">590 <span>1000</span></p>
+            </div>
           </div>
         </div>
         <div className="wishlist">
@@ -80,6 +84,10 @@ function Wishlist() {
             </div>
 
             <button>Add to Cart</button>
+            <div className="par">
+              <p className="p1">Playstation Joystick</p>
+              <p className="p2">590 <span>1000</span></p>
+            </div>
           </div>
         </div>
       </div>
