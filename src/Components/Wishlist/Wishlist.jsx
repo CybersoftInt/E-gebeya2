@@ -15,7 +15,7 @@ function Wishlist() {
               <p>35%</p>
             </div>
             <div className="wishimg">
-              <img src="" alt="huge bag" />
+              {/* <img src="" alt="huge bag" /> */}
             </div>
             <div className="delete">
               <img src="" alt="delete" />
@@ -35,7 +35,7 @@ function Wishlist() {
               <p>35%</p>
             </div>
             <div className="wishimg">
-              <img src="" alt="huge bag" />
+              {/* <img src="" alt="huge bag" /> */}
             </div>
             <div className="delete">
               <img src="" alt="delete" />
@@ -51,7 +51,7 @@ function Wishlist() {
               <p>35%</p>
             </div>
             <div className="wishimg">
-              <img src="" alt="huge bag" />
+              {/* <img src="" alt="huge bag" /> */}
             </div>
             <div className="delete">
               <img src="" alt="delete" />
@@ -66,7 +66,7 @@ function Wishlist() {
               <p>35%</p>
             </div>
             <div className="wishimg">
-              <img src="" alt="huge bag" />
+              {/* <img src="" alt="huge bag" /> */}
             </div>
             <div className="delete">
               <img src="" alt="delete" />
