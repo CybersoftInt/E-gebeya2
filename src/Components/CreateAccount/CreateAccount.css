@@ -1,0 +1,70 @@
+.create_account{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    gap: 30px;
+}
+.image{
+    display: flex;
+    margin: 20px;
+    width: 805px;
+    height: 481px;
+}
+.image img{
+    width: fit-content;
+}
+.create_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 371px;
+    height: 530px;
+    gap: 48px;
+}
+input{
+    width: fit-content;
+    padding-bottom: 10px;
+    width: 370px;
+    height: 32px;
+    border: none;
+    border-bottom: 2px solid black;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    opacity: 0.4;
+}
+.form{
+    gap: 10px;
+}
+#btn1{
+    padding: 16px 122px;
+    gap: 10px;
+    width: 371px;
+    height: 46px;
+    background: #DB4444;
+    color: white;
+    border-radius: 6px;
+}
+#btn2{
+    box-sizing: border-box;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    padding: 16px 86px;
+    width: 371px;   
+    height: 46px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+}
+.create_form img{
+    width: 24px;
+    height: 24px;
+}
+
+.google button{
+    display: flex;
+    flex-direction: row;
+}
