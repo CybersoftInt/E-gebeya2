@@ -8,6 +8,9 @@ import Wishlist from './Components/Wishlist/Wishlist';
 import Home from './Pages/Home/Home';
 import Contact from './Pages/Contact/Contact';
 import About from './Pages/About/About';
+import Profile from './Components/Profile/Profile';
+import Login from './Components/Login/Login';
+import CreateAccount from './Components/CreateAccount/CreateAccount';
 
 function App() {
   return (
@@ -20,6 +23,9 @@ function App() {
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/create' element={<CreateAccount/>}/>
         <Route path='/billing' element={<Billing/>}/>
         {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
         <Route path='/womens' element={<ShopCatagory catagory="womens"/>}/>
