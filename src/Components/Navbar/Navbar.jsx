@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import home_logo from "../Assets/home_logo_red.png"
 import search_icon from "../Assets/Search_icon.png"
 import wishlist_icon from "../Assets/wishlist-icon.png"
 import cart_icon from "../Assets/cart_icon.png"
+import { Link } from 'react-router-dom'
 
 function Navbar() {
+  const [menu, setMenu] = useState('shop')
   return (
     <div className='navbar'>
         <div className="brand-logo">
@@ -13,9 +15,18 @@ function Navbar() {
         <span> E-Gebeya</span>
         </div>
         <ul>
-          <li>Home</li>
-          <li>Contact</li>
-          <li>About</li>
+        <li onClick={() => {setMenu('home')}}>
+          <Link style={{ textDecoration: 'none'}} 
+          to="/">Home</Link>
+          {menu==='home'? <hr/>:<></>}
+          </li>
+        <li onClick={() => {setMenu('contact')}}>
+          <Link  style={{ textDecoration: 'none'}} to="/contact">Contact</Link>
+          {menu==='contact'? <hr/>:<></>}
+          </li>
+        <li onClick={() => {setMenu('about')}}>
+          <Link  style={{ textDecoration: 'none'}} to="/about">About</Link>
+          {menu==='about'? <hr/>:<></>}</li>
           <li>Sign Up</li>  
         </ul>
         <div className="nav-search">
