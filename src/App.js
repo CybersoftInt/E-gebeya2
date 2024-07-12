@@ -16,10 +16,11 @@ function App() {
 
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Wishlist/>}/>
-        <Route path='/home' element={<Home/>}/>
+        <Route path='/' element={<Home/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
+        <Route path='/wishlist' element={<Wishlist/>}/>
+        <Route path='/billing' element={<Billing/>}/>
         {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
         <Route path='/womens' element={<ShopCatagory catagory="womens"/>}/>
         <Route path='/kids' element={<ShopCatagory catagory="kids"/>}/>

@@ -76,6 +76,7 @@ flex-grow: 0;
 
 .search-icon{
     /* Component 2 */
+    cursor: pointer;
 
 width: 24px;
 height: 24px;
@@ -90,6 +91,7 @@ flex-grow: 0;
     align-items: center;
     justify-content: center;
     gap: 20px;
+    cursor: pointer;
 }
 .wish_cart img{
     width: 24px;
