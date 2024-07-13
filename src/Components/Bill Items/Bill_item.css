@@ -1,0 +1,16 @@
+.bill_items{
+
+    display: flex;
+    flex-direction: row;
+    gap: 170px;
+}
+.item{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+.item span{
+    width: max-content;
+    text-align: center;
+}

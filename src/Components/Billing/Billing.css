@@ -1,7 +1,55 @@
-.bill {}
+.bill {
+    height: fit-content;
+
+}
 .bill_header{
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     left: 0;
+}
+.bill_body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 100px;
+}
+.bill_form {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.bill_summary{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.total{
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.coupon{
+    display: flex;
+    gap: 10px;
+    width: 355px;
+    margin: 0;
+}
+.coupon button{
+    background-color: rgb(246, 65, 65);
+    border: none;
+    height: 40px;
+    width: 130px;
+    border-radius: 5px;
+    color: white;
+}
+.coupon input{
+    border: 1.5px solid;
+    height: 40px;
+    width: 130px;
+    border-radius: 5px;
+    width: fit-content;
 }

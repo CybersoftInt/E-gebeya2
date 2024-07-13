@@ -1,4 +1,5 @@
-import React from "react";
+import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
 import "../Footer/Footer.css";
 import insta from '../Assets/instagram-logo.png'
 import fb from '../Assets/facebook-logo.png'
@@ -6,7 +7,9 @@ import linked from '../Assets/linkedin-logo.png'
 import tweeter from '../Assets/twitter-logo.png'
 
 function Footer() {
+  const [menu, setMenu] = useState('/')
   return (
+    
     <div className="footer">
       <div className="footer_content">
         <div className="support">
@@ -18,7 +21,7 @@ function Footer() {
         <div className="support">
           <h3>Support</h3>
           <ul>
-            <li> Yabets and Henock,</li>
+            <li> Yabets and Henok,</li>
             <li>Addis Ababa, Ethiopia</li>
             <li>@eGebeya@gmail.com</li>
             <li>+251-976-678-541</li>
@@ -27,11 +30,21 @@ function Footer() {
         <div className="support">
           <h3>Account</h3>
           <ul>
-            <li>My Account</li>
-            <li>Login / Register</li>
-            <li>Cart</li>
-            <li>Wishlist</li>
-            {/* <li>Shop</li> */}
+            <li onClick={() => {setMenu('profile')}}>
+          <Link to="/profile">My Account</Link>
+          </li>
+          <li onClick={() => {setMenu('profile')}}>
+          <Link to="/profile">Login / Register</Link>
+          </li>
+          <li onClick={() => {setMenu('cart')}}>
+          <Link  style={{ textDecoration: 'none'}}  to="/cart">Cart</Link>
+          </li>
+          <li onClick={() => {setMenu('wishlist')}}>
+          <Link to="/wishlist">Wishlist</Link>
+          </li>
+          <li onClick={() => {setMenu('profile')}}>
+          <Link  style={{ textDecoration: 'none'}} to="/profile">Shop</Link>
+          </li>
           </ul>
         </div>
         <div className="support">
