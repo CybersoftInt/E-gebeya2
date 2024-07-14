@@ -18,8 +18,8 @@ function CreateAccount() {
                     <input type="text" placeholder='Name'/><br/>
                     <input type="email" placeholder='Email or Phone Number' /><br/>
                     <input type="password" placeholder='Passworld' /><br/>
-                    <button id='btn1'>Create Account</button><br/>
                     <div className="google">
+                    <button id='btn1'>Create Account</button><br/>
                     <button id='btn2'><img src={google_icon} alt="" />  sign up with Google </button><br/>
                     </div>
                     <span>Already have account ?</span><span>Log in</span>
