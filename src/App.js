@@ -15,8 +15,6 @@ import CreateAccount from './Components/CreateAccount/CreateAccount';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Wishlist />
       <BrowserRouter>
 
         <Navbar />
@@ -42,7 +40,7 @@ function App() {
       </BrowserRouter>
 
     </div>
-  );
+  )
 }
 
 export default App;

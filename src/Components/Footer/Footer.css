@@ -1,7 +1,10 @@
 .footer {
   display: flex;
-  position: absolute;
-  bottom: 0;
+position: relative;
+bottom: 0;
+width: 1440px;
+height: 340px;
+  margin-bottom: 0;
   width: 100%;
   font-family: "Poppins";
 }
