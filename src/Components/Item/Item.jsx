@@ -5,9 +5,12 @@ import side_image1 from "../Assets/PS_side01.png"
 import side_image2 from "../Assets/PS_side02.png"
 import side_image3 from "../Assets/PS_side03.png"
 import side_image4 from "../Assets/PS_side04.png"
-
+import plus_icon from "../Assets/icon-plus.png"
+import minus_icon from "../Assets/icon-minus.png"
 import fast_car_icon from "../Assets/fast_car_icon.png"
 import recycle_icon from "../Assets/return-icon.png"
+import wishlist_icon from "../Assets/wishlist-icon.png"
+import { Form } from 'react-router-dom'
 function Item() {
     return (
         <div className='item'>
@@ -45,7 +48,11 @@ function Item() {
                 <span>XL</span>
                 </div>
                 <div className="buy_ammount">
-                    <span>-</span><span>2</span><span>+</span>
+                    <div className="add-minus">
+                    <span><img id='minus' src={minus_icon} alt="" /></span><span>2</span><span><img src={plus_icon} id='plus' alt="" /></span>
+                    </div>
+                    <button>Buy Now</button>
+                    <div className='wishlist_icon'><img src={wishlist_icon} alt="icon" /></div>
                 </div>
                 <div className="delivery">
                     <div className="free">
