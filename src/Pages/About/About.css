@@ -1,0 +1,422 @@
+.story {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    margin: 20px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 25px;
+}
+
+h1 {
+    /* Our Story */
+
+    width: 277px;
+    height: 64px;
+
+    /* Heading/54PX SemiBold */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 64px;
+    /* identical to box height, or 119% */
+    text-align: justify;
+    letter-spacing: 0.06em;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-bottom: 10px;
+
+}
+
+.text p {
+    /* Frame 868 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: justify;
+    /* white-space: nowrap; */
+    padding: 0px;
+    gap: 24px;
+    left: 0;
+    width: 525px;
+    height: 232px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.story img {
+    /* Side Image */
+    max-width: 600px;
+    position: relative;
+    width: 505px;
+    height: 404px;
+    right: 0;
+    top: 10px;
+    background: #EB7EA8;
+    border-radius: 4px 0px 0px 4px;
+
+}
+
+.counter {
+    /* Frame 891 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+
+    position: relative;
+    width: 1170px;
+    height: 230px;
+
+
+}
+
+.stat {
+    /* Frame 870 */
+
+    box-sizing: border-box;
+
+    width: 270px;
+    height: 230px;
+
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+/* .stat:hover {
+    /* Frame 871 */
+
+/* width: 270px;
+    height: 230px; */
+
+/* Secondary 2 */
+/* background: #DB4444;
+    /* Categogy/20 */
+/*box-shadow: 0px 2px 10px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 4px; */
+
+/* Inside auto layout */
+/* flex: none;
+    order: 1;
+    flex-grow: 0; */
+
+/* } */
+.icon-stat {
+    /* Frame 701 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 169px;
+    height: 170px;
+    left: 50px;
+    top: 30px;
+
+
+}
+
+.icon {
+
+
+    /* Ellipse 6 */
+
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    margin: 10px 45px;
+    width: 80px;
+    height: 80px;
+    /* Primary 1 */
+    background: #2F2E30;
+    opacity: 0.3;
+
+
+
+}
+
+.icon img {
+    /* icon:shop */
+
+    /* position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%; */
+    /* Group */
+
+    position: absolute;
+    left: 9.15%;
+    margin: auto;
+    right: 9.2%;
+    top: 0px;
+    bottom: 12.5%;
+
+
+
+
+}
+
+.desc {
+    /* Frame 695 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+    margin: auto;
+    width: 169px;
+    height: 66px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.desc h3 {
+    /* FREE AND FAST DELIVERY */
+
+    width: 92px;
+    height: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    /* Heading/32PX Bold */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 30px;
+    /* identical to box height, or 94% */
+    letter-spacing: 0.04em;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.desc p {
+    /* Free delivery for all orders over $140 */
+
+    width: 169px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: small;
+    white-space: nowrap;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-align: center;
+    margin: 10px;
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.persona {
+    /* Frame 890 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 30px;
+    margin-top: 20px;
+    position: relative;
+    width: 1170px;
+    height: 564px;
+
+
+}
+
+.indiv {
+    /* Frame 888 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 32px;
+
+    width: 370px;
+    height: 564px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.indiv-img {
+    /* Frame 874 */
+
+    width: 370px;
+    height: 430px;
+
+    /* Secondary */
+    background: #F5F5F5;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.indiv-img img {
+    /* image 46 */
+
+    position: absolute;
+    width: 236px;
+    height: 391px;
+    left: 67px;
+    top: 39px;
+
+    /* background: url(image.png); */
+
+}
+
+.indiv-desc {
+    /* Frame 884 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 185px;
+    height: 102px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.name {
+    /* Frame 878 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 185px;
+    height: 62px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.name h3 {
+    /* Tom Cruise */
+
+    width: 185px;
+    height: 30px;
+
+    /* Heading/32PX Medium */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* identical to box height, or 94% */
+    letter-spacing: 0.04em;
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.name p {
+    /* Founder & Chairman */
+
+    width: 167px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}

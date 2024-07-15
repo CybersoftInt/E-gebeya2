@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Billing from './Components/Billing/Billing';
 import Wishlist from './Components/Wishlist/Wishlist';
@@ -17,7 +17,6 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-
       <Navbar/>
       <Routes>
         <Route path='/' element={<Item/>}/>
@@ -29,6 +28,19 @@ function App() {
         <Route path='/create' element={<CreateAccount/>}/>
         <Route path='/billing' element={<Billing/>}/>
         {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
+=======
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/create' element={<CreateAccount />} />
+          <Route path='/billing' element={<Billing />} />
+          {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
+>>>>>>> 1315f997aa5455e238cb0a8d3a9630b3e27efdee
         <Route path='/womens' element={<ShopCatagory catagory="womens"/>}/>
         <Route path='/kids' element={<ShopCatagory catagory="kids"/>}/>
         <Route path='/product' element={<Product/>}>
@@ -36,12 +48,12 @@ function App() {
         </Route>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/> */}
-      </Routes>
-      <Footer />
+        </Routes>
+        <Footer />
       </BrowserRouter>
 
     </div>
-  );
+  )
 }
 
 export default App;
