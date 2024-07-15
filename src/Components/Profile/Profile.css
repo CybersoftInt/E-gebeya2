@@ -1,0 +1,470 @@
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    margin-right: 140px;
+    margin-left: 40px;
+}
+
+h3 {
+    /* Manage My Account */
+
+    /* position: absolute; */
+    width: 166px;
+    height: 24px;
+
+    /* Title/16PX Medium */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 100%;
+
+}
+
+.input {
+    /* Frame 848 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 50px;
+
+    /* position: absolute; */
+    width: 710px;
+    height: 82px;
+    left: 80px;
+    top: 84px;
+
+
+}
+
+.fname {
+    /* Frame 841 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 330px;
+    height: 82px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.fname label {
+    /* First Name */
+
+    width: 85px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+input {
+    /* Placebox info */
+
+    width: 330px;
+    height: 50px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.lname {
+    /* Frame 842 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 330px;
+    height: 82px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.lname label {
+    /* Last Name */
+
+    width: 85px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.email {
+    /* Frame 843 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 330px;
+    height: 82px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.email label {
+    /* Email */
+
+    width: 44px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.addr {
+    /* Frame 844 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 330px;
+    height: 82px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.addr label {
+    /* Address */
+
+    width: 66px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.password {
+    /* Frame 846 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    padding: 0px;
+    gap: 16px;
+
+    /* position: absolute; */
+    width: 100%;
+    height: 214px;
+    left: 80px;
+    top: 296px;
+
+
+}
+
+.pass {
+    /* Frame 845 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 710px;
+    height: 82px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.pass label {
+    /* Password Changes */
+
+    width: 154px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.npass label {
+    /* Placebox info */
+
+    width: 710px;
+    height: 50px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.copass label {
+    /* Placebox info */
+
+    width: 100%;
+    height: 50px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
+
+.buttons {
+    /* Frame 847 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+
+    position: absolute;
+    width: 303px;
+    height: 56px;
+    right: 80px;
+    top: calc(50% - 56px/2 + 247px);
+
+
+}
+
+.cancel {
+    /* Cancel */
+
+    /* width: 57px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    /* font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px; */
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    /* color: #000000; */
+
+
+    /* Inside auto layout */
+    /* flex: none;
+    order: 0;
+    flex-grow: 0; */
+
+    /* Cancel */
+
+    width: 57px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+    background: transparent;
+    text-decoration: none;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+.save button {
+    /* Button */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 10px;
+
+    width: 214px;
+    height: 56px;
+    border: none;
+    /* Button2 */
+    background: #DB4444;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+
+    /* View All Products */
+
+
+
+    /* Title/16PX Medium */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    white-space: nowrap;
+    /* identical to box height, or 150% */
+
+    /* Text */
+    color: #FAFAFA;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
