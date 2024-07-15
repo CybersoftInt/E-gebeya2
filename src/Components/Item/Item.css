@@ -1,0 +1,210 @@
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item_details {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.item_dir{
+    display: flex;
+    position: relative;
+    left: 5px;
+    top: 0;
+}
+.item_images {
+  display: flex;
+  position: relative;
+  left: 0px;
+  top: 1px;
+  width: 50%x;
+  margin: 5px;
+  padding: 5px;
+}
+.side_images {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 170px;
+  height: 500px;
+  gap: 15px;
+}
+.side_images img {
+  display: flex;
+  width: max-content;
+  height: auto;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+.side_image{
+    /* Frame 928 */
+
+position: relative;
+width: 170px;
+height: 138px;
+
+/* Secondary */
+background: #F5F5F5;
+border-radius: 4px;
+
+}
+.main_image {
+/* Frame 927 */
+
+position: relative;
+width: 500px;
+height: 500px;
+
+/* Secondary */
+background: #F5F5F5;
+border-radius: 4px;
+
+  background: #f5f5f5;
+
+}
+.main_image img {
+/* image 63 */
+
+position: absolute;
+width: 446px;
+height: 315px;
+left: 27px;
+top: 84px;
+
+border-radius: 2px;
+
+}
+.item_disc {
+  width: 399px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.item_disc h1 {
+  /* Heading/24PX SemiBold */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+.item_disc h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+
+}
+.size {
+  display: flex;
+  flex-direction: row;
+}
+.buy_ammount {
+  display: flex;
+  flex-direction: row;
+}
+.delivery {
+  display: flex;
+  flex-direction: column;
+  /* Frame 937 */
+
+box-sizing: border-box;
+
+position: relative;
+width: 399px;
+height: 180px;
+
+border: 1px solid rgba(0, 0, 0, 0.5);
+border-radius: 4px;
+
+}
+.free{
+    /* Frame 915 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+position: absolute;
+width: 332px;
+height: 50px;
+left: 16px;
+top: 24px;
+
+
+}
+.return{
+    /* Frame 914 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 16px;
+
+position: absolute;
+width: 281px;
+height: 50px;
+left: 16px;
+top: 106px;
+
+
+}
+.free,
+.return {
+    /* border: 1.5px solid black; */
+    
+
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 8px;
+}
+.delivery img {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.delivery p {
+  /* Enter your postal code for Delivery Availability */
+
+  width: 276px;
+  height: 18px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* identical to box height, or 150% */
+  text-decoration-line: underline;
+
+  color: #000000;
+}
+.delivery h1 {
+  width: max-content;
+  height: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}

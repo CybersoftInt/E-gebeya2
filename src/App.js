@@ -11,6 +11,7 @@ import About from './Pages/About/About';
 import Profile from './Components/Profile/Profile';
 import Login from './Components/Login/Login';
 import CreateAccount from './Components/CreateAccount/CreateAccount';
+import Item from './Components/Item/Item';
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
 
       <Navbar/>
       <Routes>
-        <Route path='/' element={<CreateAccount/>}/>
+        <Route path='/' element={<Item/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
