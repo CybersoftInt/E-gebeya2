@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
+<<<<<<< HEAD
       <Navbar/>
       <Routes>
         <Route path='/' element={<Billing/>}/>
@@ -28,6 +29,19 @@ function App() {
         <Route path='/create' element={<CreateAccount/>}/>
         <Route path='/billing' element={<Billing/>}/>
         {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
+=======
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Item />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/create' element={<CreateAccount />} />
+          <Route path='/billing' element={<Billing />} />
+          {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
+>>>>>>> 5ea5dc78009bce09944cb02570ad4ddab142ece3
 =======
         <Navbar />
         <Routes>

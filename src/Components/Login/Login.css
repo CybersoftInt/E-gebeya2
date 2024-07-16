@@ -1,0 +1,212 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 129px;
+
+    position: relative;
+    width: 1305px;
+    height: 781px;
+}
+
+.login {
+    /* Frame 766 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+
+    width: 371px;
+    height: 326px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.img img {
+    /* Side Image */
+
+    width: 805px;
+    height: 781px;
+
+    background: #CBE4E8;
+    border-radius: 0px 4px 4px 0px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.sub-login {
+    /* Frame 764 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 48px;
+
+    width: 370px;
+    height: 230px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.sub-login h3 {
+    /* Log in to Exclusive */
+
+    width: 345px;
+    height: 30px;
+
+    /* Heading/36PX Medium */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 30px;
+    /* identical to box height, or 83% */
+    letter-spacing: 0.04em;
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.sub-login p {
+    /* Enter your details below */
+
+    width: 191px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.sub-login label {
+    /* Frame 755 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    width: 370px;
+    height: 32px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.btn {
+    /* Frame 765 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 87px;
+
+    width: 371px;
+    height: 56px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.btn button {
+    /* Button */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 10px;
+
+    width: 143px;
+    height: 56px;
+
+    /* Button2 */
+    background: #DB4444;
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.btn span {
+    /* Forget Password? */
+
+    width: 141px;
+    height: 24px;
+
+    /* Title/16PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    /* Secondary 2 */
+    color: #DB4444;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
