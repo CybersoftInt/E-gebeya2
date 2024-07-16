@@ -21,13 +21,13 @@ function Billing() {
                         <label for="name">First Name</label>
                         <input type='name'/><br/>
 
-                        <label for="name">First Name</label>
+                        <label for="name">Company Name</label>
                         <input type='name'/>
                         <br/>
-                        <label for="name">First Name</label>
-                        <input type='name'/>
+                        <label for="adress">Street Address</label>
+                        <input type='adress'/>
                         <br/>
-                        <label for="name">First Name</label>
+                        <label for="name">Apartment floor, etc, (optional)</label>
                         <input type='name'/>
                         <br/>
                         <label for="name">First Name</label>
@@ -35,7 +35,7 @@ function Billing() {
                     </form>
                 
                 </div>
-                  <div className="bill_summary">
+             <div className="bill_summary">
                 <Bill_item/>
                 <Bill_item/>
                 
@@ -49,6 +49,7 @@ function Billing() {
                     <input type='text' placeholder='Coupon Code'/>
                     <button>Apply Coupon</button>
                     </div>
+                    <button>Place Order</button>
                 </div>
 
 

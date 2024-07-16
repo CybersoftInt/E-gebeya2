@@ -33,7 +33,7 @@ function Item() {
                 
                 </div>
             <div className="item_disc">
-                <h1>Havic HV G-92 Gamepad</h1>
+                <h1>HavicHV G-92 Gamepad</h1>
                 <p>(150 reviews) | <span>in stock</span> </p>
                 <h2>$192.00</h2>
                 <p className='discription'>PlayStation 5 Controller Skin High quality vinyl with air channel adhesive for easy bubble free install & mess free removal Pressure sensitive.</p>
