@@ -46,6 +46,11 @@ h3 {
 
 }
 
+.form {
+    border: none;
+    border-radius: 5px;
+}
+
 .form h3 {
     /* Edit Your Profile */
 
