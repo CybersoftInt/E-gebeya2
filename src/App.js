@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-<<<<<<< HEAD
+
       <Navbar/>
       <Routes>
         <Route path='/' element={<Billing/>}/>
