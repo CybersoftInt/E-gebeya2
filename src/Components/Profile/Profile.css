@@ -36,7 +36,35 @@ h3 {
     flex-direction: column;
     margin-top: 20px;
     margin-right: 20px;
-    width: 100%;
+    left: 300px;
+    top: 50px;
+    bottom: 10px;
+    width: 70%;
+    height: 100%;
+    position: absolute;
+
+
+}
+
+.form h3 {
+    /* Edit Your Profile */
+
+    /* position: absolute; */
+    width: 155px;
+    height: 28px;
+    left: 80px;
+    top: 40px;
+    /* Title/20PX Medium */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    /* identical to box height, or 140% */
+
+    /* Secondary 2 */
+    color: #DB4444;
+
 
 }
 
@@ -265,10 +293,10 @@ input {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: left;
+    /* justify-content: left; */
     padding: 0px;
     gap: 16px;
-
+    margin: 10px;
     /* position: absolute; */
     width: 100%;
     height: 214px;
@@ -361,12 +389,12 @@ input {
     align-items: center;
     padding: 0px;
     gap: 32px;
-
+    margin-top: 30px;
     position: absolute;
     width: 303px;
     height: 56px;
-    right: 80px;
-    top: calc(50% - 56px/2 + 247px);
+    right: 85px;
+    top: calc(50% - 56px/2 + 280px);
 
 
 }
