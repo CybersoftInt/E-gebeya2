@@ -1,14 +1,16 @@
 .footer {
   display: flex;
-  position: relative;
+  position: absolute;
   width: 100%;
-  bottom: 0;
+  bottom: 0px;
+  right: 0px;
   left: 0;
-  width: 100%;
+  top: 200%;
   height: 340px;
   margin-bottom: 0;
   font-family: "Poppins";
 }
+
 .footer_content {
   color: white;
   background-color: black;
@@ -23,8 +25,9 @@
   text-align: left;
   justify-content: center;
   gap: 60px;
-  
+
 }
+
 .footer_content ul {
   font-size: 15px;
   list-style: none;
@@ -32,30 +35,37 @@
   padding: 0;
   align-items: center;
 }
+
 .footer_content li {
-    font-size: 16px;
+  font-size: 16px;
   margin: 10px;
   width: max-content;
 }
-.footer_content h3{
-    font-weight: 400;
 
-    font-size: 20px;
+.footer_content h3 {
+  font-weight: 400;
+
+  font-size: 20px;
 
 }
-.support, .socials{
+
+.support,
+.socials {
   height: 200px;
 }
+
 .support,
 .account,
 .quick_link,
-.socials, .subscribe {
+.socials,
+.subscribe {
   width: fit-content;
   flex: none;
-order: 3;
-flex-grow: 0;
+  order: 3;
+  flex-grow: 0;
 
 }
+
 .subscribe input {
   /* Send Mail */
 
@@ -70,7 +80,7 @@ flex-grow: 0;
   padding: 12px 0px 12px 16px;
   gap: 32px;
   /* Text */
-  color:  #fafafa;
+  color: #fafafa;
   border-radius: 4px;
 
   /* Inside auto layout */
@@ -78,30 +88,18 @@ flex-grow: 0;
   order: 1;
   flex-grow: 0;
 }
-.socials img{
-    border: 0px solid;
-    border-radius: 25px;
-    width: 24px;
-    height: 24px;
-    color: wheat;
-    background-color: white;
+
+.socials img {
+  border: 0px solid;
+  border-radius: 25px;
+  width: 24px;
+  height: 24px;
+  color: wheat;
+  background-color: white;
 }
-.socials ul{
+
+.socials ul {
   cursor: pointer;
   display: flex;
   flex-direction: row;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
