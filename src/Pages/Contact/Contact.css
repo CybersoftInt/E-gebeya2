@@ -25,16 +25,15 @@
 }
 
 .left {
-    /* Frame 863 */
+
 
     /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0px;
+    padding: 10px;
     gap: 32px;
     margin-right: 20px;
-    border: 1px solid red;
     position: absolute;
     width: 270px;
     height: 366px;
@@ -42,18 +41,18 @@
     top: 40px;
 
 
+
+
 }
 
 .upper {
-    /* Frame 861 */
 
-    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-
+    margin-right: 20px;
     width: 262px;
     height: 122px;
 
@@ -63,13 +62,15 @@
     order: 0;
     flex-grow: 0;
 
+
 }
 
 p {
     /* We are available 24/7, 7 days a week. */
 
-    width: 262px;
+    width: 200px;
     height: 21px;
+    margin-left: 0px;
     white-space: nowrap;
     /* Title/14PX Regular */
     font-family: 'Poppins';
@@ -167,7 +168,7 @@ span {
 }
 
 .lower {
-    /* Frame 862 */
+
 
     /* Auto layout */
     display: flex;
@@ -175,18 +176,17 @@ span {
     align-items: flex-start;
     padding: 0px;
     gap: 24px;
-    margin-left: 0px;
-    width: 28%;
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 250px;
     height: 180px;
-    left: 40px;
-    position: absolute;
-    background-color: #DB4444;
 
 
     /* Inside auto layout */
     flex: none;
     order: 2;
     flex-grow: 0;
+
 
 }
 
@@ -199,7 +199,9 @@ span {
 }
 
 .form {
-    border: 1px solid black;
+    border: 5px solid gray;
+    border-radius: 10px;
+    box-shadow: 2px solid #FFFFFF;
     padding: 10px;
     margin-left: 20px;
     margin-top: -10px;
@@ -222,6 +224,20 @@ fieldset {
     left: 31px;
     top: 40px;
 
+
+}
+
+input {
+    /* Placebox info */
+
+    width: 235px;
+    height: 50px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
 
 }
 

@@ -19,20 +19,21 @@ function Contact() {
             <p>We are available 24/7, 7 days a week</p>
             <p>Phone: +2519113454</p>
           </div>
-
-        </div>
-
-        <div className="lower">
-          <div className="phonetxt">
-            <div className="phone">
-              <img src={EmailIcon} alt="" />
+          <div className="lower">
+            <div className="phonetxt">
+              <div className="phone">
+                <img src={EmailIcon} alt="" />
+              </div>
+              <span>Write to Us</span>
             </div>
-            <span>Write to Us</span>
+
+            <p>Fill out the form and we will contact you within 24 hours</p>
+            <p>Email: hdgfhdg@gmail.com</p>
           </div>
 
-          <p>Fill out the form and we will contact you within 24 hours</p>
-          <p>Email: hdgfhdg@gmail.com</p>
         </div>
+
+
         <div className="right">
           <div className="form">
             <fieldset>
