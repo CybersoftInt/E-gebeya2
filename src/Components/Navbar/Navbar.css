@@ -1,39 +1,39 @@
 .navbar {
-    height: 50px; /* Increased height for better visibility */
+    height: 50px;
     display: flex;
     padding: 10px;
     flex-direction: row;
-    justify-content: space-between; /* Changed from space-around to space-between */
-    align-items: center; /* Added to vertically center the elements */
+    justify-content: space-between;
+    align-items: center;
     padding: 16px;
     box-shadow: 0 1px 3px -2px black;
     font-weight: 500;
     font-family: "Poppins";
-}
-
-.navbar hr {
-    border-color: crimson; /* Set the color of the hr element */
-}
-
-.brand-logo {
+  }
+  
+  .navbar hr {
+    border-color: crimson;
+  }
+  
+  .brand-logo {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px; /* Added gap between logo and text */
-}
-
-.navbar-logo {
-    height: 40px; /* Set the height of the logo */
-}
-
-.brand-logo span {
+    gap: 10px;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+  }
+  
+  .brand-logo span {
     width: max-content;
     color: black;
     font-weight: bold;
     font-size: 24px;
-}
-
-.navbar ul {
+  }
+  
+  .navbar ul {
     display: flex;
     list-style: none;
     align-items: center;
@@ -41,18 +41,18 @@
     gap: 20px;
     font-size: 16px;
     font-weight: 400;
-    margin: 0; /* Removed the left margin */
-}
-
-.nav-search {
+    margin: 0;
+  }
+  
+  .nav-search {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 10px; /* Added gap between input and icon */
-}
-
-.navbar input {
+    gap: 10px;
+  }
+  
+  .navbar input {
     width: 25vw;
     height: 30px;
     border: none;
@@ -61,26 +61,71 @@
     flex: none;
     order: 0;
     flex-grow: 0;
-}
-
-.search-icon {
+  }
+  
+  .search-icon {
     cursor: pointer;
     width: 24px;
     height: 24px;
     flex: none;
     order: 1;
     flex-grow: 0;
-}
-
-.wish_cart {
+  }
+  
+  .wish_cart {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
     cursor: pointer;
-}
-
-.wish_cart img {
+  }
+  
+  .wish_cart img {
     width: 24px;
     height: 24px;
-}
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      height: auto;
+      padding: 16px 0;
+    }
+  
+    .brand-logo span {
+      display: none;
+    }
+  
+    .nav-search {
+      width: 100%;
+      margin-top: 16px;
+      position: relative;
+    }
+  
+    .navbar input {
+      width: 100%;
+      display: none;
+    }
+  
+    .search-icon {
+      order: 0;
+    }
+  
+    .wish_cart {
+      margin-top: 16px;
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .navbar input {
+      width: 200px;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .navbar input {
+      width: 300px;
+    }
+  }
