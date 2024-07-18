@@ -1,0 +1,302 @@
+.page {
+    padding: 15px;
+}
+
+.page p {
+    /* Roadmap */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 12px;
+
+    position: relative;
+    width: 130px;
+    height: 21px;
+
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.left {
+
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 32px;
+    margin-right: 20px;
+    position: absolute;
+    width: 270px;
+    height: 366px;
+    left: 35px;
+    top: 40px;
+
+
+
+
+}
+
+.upper {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    margin-right: 20px;
+    width: 262px;
+    height: 122px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+
+}
+
+p {
+    /* We are available 24/7, 7 days a week. */
+
+    width: 200px;
+    height: 21px;
+    margin-left: 0px;
+    white-space: nowrap;
+    /* Title/14PX Regular */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    /* identical to box height, or 150% */
+
+    /* Text2 */
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.phone {
+    /* icons-phone */
+
+    width: 40px;
+    height: 40px;
+
+    /* Secondary 2 */
+    background: #DB4444;
+    border-radius: 31px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+img {
+    /* Vector */
+
+    /* position: absolute; */
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+
+    /* Primary */
+    border: 1.5px solid #FFFFFF;
+
+}
+
+.phonetxt {
+    /* Frame 853 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 16px;
+
+    width: 135px;
+    height: 40px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+span {
+    /* Call To Us */
+
+    width: 79px;
+    height: 24px;
+    white-space: nowrap;
+    /* Title/16PX Medium */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+.lower {
+
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 250px;
+    height: 180px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+
+}
+
+.right {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.form {
+    border: 5px solid gray;
+    border-radius: 10px;
+    box-shadow: 2px solid #FFFFFF;
+    padding: 10px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+fieldset {
+    /* Frame 856 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 0px;
+    gap: 32px;
+    margin-left: 30px;
+    margin-right: 20px;
+    /* position: absolute; */
+    width: 737px;
+    height: 377px;
+    left: 31px;
+    top: 40px;
+
+
+}
+
+input {
+    /* Placebox info */
+
+    width: 235px;
+    height: 50px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.details {
+    /* Frame 852 */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    width: 737px;
+    height: 50px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+textarea {
+    /* Placebox info */
+
+    width: 737px;
+    height: 207px;
+
+
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+
+}
+
+button {
+    /* Button */
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 48px;
+    gap: 10px;
+
+    width: 215px;
+    height: 56px;
+
+    /* Button2 */
+    /* background: #DB4444; */
+    border-radius: 4px;
+
+    /* Inside auto layout */
+    flex: none;
+    order: 2;
+    flex-grow: 0;
+
+}
