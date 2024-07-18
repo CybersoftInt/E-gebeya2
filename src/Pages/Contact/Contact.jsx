@@ -2,7 +2,14 @@ import React from 'react'
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <div>
+      <p>Home / Contact</p>
+      <div className="container">
+        <div className="left">
+
+        </div>
+      </div>
+    </div>
   )
 }
 
