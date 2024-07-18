@@ -9,19 +9,19 @@ function Wishlist() {
         <button>Move All To Bag</button>
       </div>
 
-      <div class="wishlist-items-container">        
-        <WishCard/>
-        <WishCard/>
-        <WishCard/>
-        <WishCard/>
-        <WishCard/>
-        <WishCard/>
-        </div>
+      <div class="wishlist-items-container">
+        <WishCard />
+        <WishCard />
+        <WishCard />
+        <WishCard />
+        <WishCard />
+        <WishCard />
+      </div>
       <div className="wishlist-for-you">
         <h4>Just For You</h4>
         <button>See All</button>
       </div>
-  
+
     </div>
 
   )
