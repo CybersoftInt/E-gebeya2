@@ -20,7 +20,7 @@ function App() {
 
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Billing/>}/>
+        <Route path='/' element={<Item/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>
