@@ -75,6 +75,12 @@ function Item() {
 
             </div>
            </div>
+      <div className="related_item">
+        <div className="related_header">
+            <div id="red_box"></div>
+            <span>Related Items</span>
+        </div>
+      </div>
             
         </div>
     )
