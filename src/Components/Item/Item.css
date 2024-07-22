@@ -45,6 +45,7 @@
   /* Frame 928 */
 
   position: relative;
+  top: 5px;
   width: 170px;
   height: 138px;
 
@@ -380,22 +381,9 @@ line-height: 20px;
 color: #DB4444;
 
 
-/* Inside auto layout */
+/* Inside autlayout */
 flex: none;
 order: 1;
 flex-grow: 0;
 
-}
-#red_box{
-/* Category Rectangle */
-background: #DB4444;
-
-width: 20px;
-height: 40px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
 }
