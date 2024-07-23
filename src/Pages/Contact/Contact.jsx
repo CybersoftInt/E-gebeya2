@@ -14,7 +14,7 @@ const Contact = () => {
               <div className="phone">
                 <img src={PhoneIcon} alt="Phone" />
               </div>
-              <span>Call To Us</span>
+              <span>Call Us</span>
             </div>
             <p>We are available 24/7, 7 days a week.</p>
             <p>Phone: +2519161111</p>
