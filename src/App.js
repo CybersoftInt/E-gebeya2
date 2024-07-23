@@ -18,17 +18,17 @@ function App() {
     <div className="App">
       <BrowserRouter>
 
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<Item/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/wishlist' element={<Wishlist/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/create' element={<CreateAccount/>}/>
-        <Route path='/billing' element={<Billing/>}/>
-        {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Item />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/create' element={<CreateAccount />} />
+          <Route path='/billing' element={<Billing />} />
+          {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
 =======
         <Navbar />
         <Routes>
@@ -63,7 +63,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<LoginSignup/>}/> */}
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
 
     </div>
