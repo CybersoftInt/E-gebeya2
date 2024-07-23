@@ -82,6 +82,7 @@ fieldset {
     max-width: 600px;
     margin: 0 auto;
     margin-top: -20px;
+    margin-left: 10px;
 
 }
 
@@ -91,9 +92,8 @@ fieldset {
     margin-bottom: 20px;
 }
 
-input,
-textarea {
-    width: 100%;
+input {
+    width: 40%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -104,11 +104,20 @@ textarea {
 }
 
 textarea {
+    width: 130%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin-right: 10px;
     resize: none;
     height: 150px;
 }
 
 .button-container {
+    margin-right: -200px;
     display: flex;
     justify-content: flex-end;
 }
