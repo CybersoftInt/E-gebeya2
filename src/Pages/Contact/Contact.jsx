@@ -34,7 +34,7 @@ const Contact = () => {
         </div>
         <div className="right">
           <form className="form">
-            <fieldset>
+            <fieldset id='contact-fieldset'>
 
               <div className="details">
                 <input type="text" name="name" placeholder="Your Name *" required />
