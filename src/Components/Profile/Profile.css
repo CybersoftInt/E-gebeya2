@@ -107,6 +107,7 @@ input {
 
 .buttons {
     display: flex;
+    margin-right: -20px;
     justify-content: flex-end;
     gap: 10px;
 }
