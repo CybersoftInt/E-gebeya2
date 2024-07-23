@@ -1,3 +1,6 @@
+.about{
+    width: auto;
+}
 .story {
     display: flex;
     flex-direction: row;
@@ -11,7 +14,7 @@
     margin: 20px 25px;
 }
 
-h1 {
+.about h1 {
     /* Our Story */
 
     width: 277px;
@@ -273,7 +276,6 @@ h1 {
     gap: 30px;
     margin-top: 20px;
     position: relative;
-    width: 1170px;
     height: 564px;
 
 

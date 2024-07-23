@@ -12,6 +12,7 @@ import Profile from './Components/Profile/Profile';
 import Login from './Components/Login/Login';
 import CreateAccount from './Components/CreateAccount/CreateAccount';
 import Item from './Components/Item/Item';
+import Cart from './Components/Cart/Cart';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
 
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Item/>}/>
+      <Route path='/' element={<Home/>}/>
+        <Route path='/cart' element={<Cart/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>
         <Route path='/wishlist' element={<Wishlist/>}/>

@@ -5,7 +5,7 @@ import IconShop from "../../Components/Assets/icon_shop.png"
 import IndivImage from "../../Components/Assets/image 46.png"
 function About() {
     return (
-        <div>
+        <div className='about'>
             <div className="story">
                 <div className="text">
                     <h1>Our Story</h1>

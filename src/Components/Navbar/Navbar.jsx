@@ -36,8 +36,7 @@ function Navbar() {
         </div>
         <div className="wish_cart">
           <Link to="/wishlist"><img onClick={() => {setMenu('wishlist')}} src={wishlist_icon} className='wishlist_icon'/></Link>
-        
-        <img src={cart_icon} className='wishlist_icon'/>
+          <Link to="/cart"><img onClick={() => {setMenu('cart')}} src={cart_icon} className='wishlist_icon'/></Link>
         </div>
 
 
