@@ -1,123 +1,134 @@
 .page {
-    padding: 15px;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.page p {
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 12px;
-
-    position: relative;
-    width: 130px;
-    height: 21px;
 
 
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.left,
+.right {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .left {
-
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    gap: 32px;
+    flex: 1;
     margin-right: 20px;
-    position: absolute;
-    width: 270px;
-    height: 366px;
-    left: 35px;
-    top: 40px;
-
-
-
-
+    margin-top: -280px;
+    margin-left: -80px;
 }
 
-.upper {
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    margin-right: 20px;
-    width: 262px;
-    height: 122px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-
+.right {
+    flex: 2;
+    margin-top: -280px;
+    margin-right: 30px;
 }
 
-.upper p {
-    /* We are available 24/7, 7 days a week. */
-
-    width: 200px;
-    height: 21px;
-    margin-left: 0px;
-    white-space: nowrap;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 21px;
-    color: #000000;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-.phone {
-
-    width: 40px;
-    height: 40px;
-    background: #DB4444;
-    border-radius: 31px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-.phone img {
-
-    left: 25%;
-    right: 25%;
-    top: 25%;
-    bottom: 25%;
-    border: 1.5px solid #FFFFFF;
-
+.upper,
+.lower {
+    margin-bottom: 20px;
 }
 
 .phonetxt {
-
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0px;
-    gap: 16px;
-    width: 135px;
+}
+
+.phone {
+    width: 40px;
     height: 40px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    background: #DB4444;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.phone img {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
 
 }
 
-.phonetxt span {
+fieldset {
+    border: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: -20px;
 
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    padding: 15px;
+    background: #DB4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #b63737;
+}
+
+span {
     width: 79px;
     height: 24px;
     white-space: nowrap;
@@ -127,114 +138,8 @@
     font-size: 16px;
     line-height: 24px;
     color: #000000;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
 }
 
-.lower {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 24px;
-    margin-top: 40px;
-    margin-right: 20px;
-    width: 250px;
-    height: 180px;
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-
-
-}
-
-.right {
-    display: flex;
-    border: 1px solid black;
-    flex-direction: column;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 200px;
-}
-
-.form {
-    border: 5px solid gray;
-    border-radius: 10px;
-    box-shadow: 2px solid #FFFFFF;
-    padding: 10px;
-    margin-left: 20px;
-    margin-top: -10px;
-}
-
-fieldset {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 0px;
-    gap: 32px;
-    margin-left: 30px;
-    margin-right: 20px;
-    width: 600px;
-    max-width: 700px;
-    height: 377px;
-    left: 31px;
-    top: 40px;
-
-
-}
-
-input {
-
-
-    width: 135px;
-    height: 50px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-.details {
-
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-    width: 737px;
-    height: 50px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-textarea {
-
-
-    width: 737px;
-    height: 207px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
-}
-
-button {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 48px;
-    gap: 10px;
-    width: 215px;
-    height: 56px;
-    border-radius: 4px;
-    flex: none;
-    order: 2;
-    flex-grow: 0;
-
+.left p {
+    text-align: left;
 }
