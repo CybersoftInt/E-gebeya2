@@ -10,7 +10,7 @@
     margin-left: 40px;
 }
 
-h3 {
+.container h3 {
     /* Manage My Account */
 
     /* position: absolute; */
@@ -46,7 +46,7 @@ h3 {
 
 }
 
-fieldset {
+.container fieldset {
     border-style: none;
 
 }
@@ -140,7 +140,7 @@ fieldset {
 
 }
 
-input {
+.container input {
     /* Placebox info */
 
     width: 330px;

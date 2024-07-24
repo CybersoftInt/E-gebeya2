@@ -21,7 +21,7 @@
     height: 530px;
     gap: 48px;
 }
-input{
+.create_account input{
     width: fit-content;
     padding-bottom: 15px;
     width: 370px;

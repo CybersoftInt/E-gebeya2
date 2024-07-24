@@ -14,7 +14,7 @@ function Cart() {
         <div className="checkout">
           <div className="coupon">
             <input type="text" />
-            <button>Apply Coupon</button>
+            <button placeholder="Coupon Code" >Apply Coupon</button>
 
           </div>
           <div className="cart-total">
@@ -34,12 +34,32 @@ function Cart() {
               <span>{total_price}</span>
             </div>
             <button>Procees to checkout</button>
-
-
           </div>
 
         </div>
         <div className="update-cart">
+          <div className="subtotal">
+            <div className="subtotal-header">
+            <span>Product</span>
+            <span>price</span>
+            <span>Quantity</span>
+            <span>Subtotal</span>
+            </div>
+            <div className="cart-items">
+              <img src="" alt="" />
+              <span>LCD Monitor</span>
+              <span>$650</span>
+              <input type="number" name="" id="" />
+              <span>$650</span>
+             
+            </div>
+
+          </div>
+          <div className="sub-btns">
+            <button>Return To Shop</button>
+            <button>Update Cart</button>
+
+          </div>
 
         </div>
 

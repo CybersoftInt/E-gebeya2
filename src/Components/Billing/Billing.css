@@ -53,7 +53,7 @@
     border-radius: 5px;
     width: fit-content;
 }
-button {
+.bill button {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -74,10 +74,10 @@ button {
     border-radius: 10px;
     box-shadow: inset 0 0 0 0 #db4444;
   }
-  button:hover {
+  .bill button:hover {
     color: white;
     box-shadow: inset 0 -100px 0 0 #db4444;
   }
- button:active {
+ .bill button:active {
     transform: scale(0.9);
   }

@@ -108,7 +108,7 @@
 
 }
 
-img {
+.container img {
     /* Vector */
 
     /* position: absolute; */
@@ -143,7 +143,7 @@ img {
 
 }
 
-span {
+.page span {
     /* Call To Us */
 
     width: 79px;
@@ -207,7 +207,7 @@ span {
     margin-top: -10px;
 }
 
-fieldset {
+.page fieldset {
     /* Frame 856 */
 
     /* Auto layout */
@@ -227,7 +227,7 @@ fieldset {
 
 }
 
-input {
+.page input {
     /* Placebox info */
 
     width: 235px;
@@ -262,7 +262,7 @@ input {
 
 }
 
-textarea {
+.page textarea {
     /* Placebox info */
 
     width: 737px;
@@ -276,7 +276,7 @@ textarea {
 
 }
 
-button {
+.page button {
     /* Button */
 
     /* Auto layout */

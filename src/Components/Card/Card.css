@@ -1,0 +1,104 @@
+.card {
+  /* Cart With Flat Discount  */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  width: 270px;
+  height: 350px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.card-top {
+  width: 270px;
+  height: 250px;
+  background: #f5f5f5;
+  border-radius: 4px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+  width: 201px;
+  height: 84px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.card-bottom h3{
+    /* HAVIT HV-G92 Gamepad */
+
+width: 201px;
+height: 24px;
+
+/* Title/16PX Medium */
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height, or 150% */
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.card-price {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 12px;
+
+  width: 85px;
+  height: 24px;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.card-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+
+  position: relative;
+  width: 34px;
+  height: 76px;
+  right: 12px;
+  top: 10px;
+}
+.card-icons img {
+/* Fill Heart */
+
+width: 34px;
+height: 34px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}

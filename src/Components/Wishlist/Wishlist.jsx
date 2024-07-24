@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Wishlist.css"
 import WishCard from '../Wishlist Card/WishCard'
+import Card from '../Card/Card'
 function Wishlist() {
   return (
     <div className='wishlist-container'>
@@ -21,6 +22,7 @@ function Wishlist() {
         <h4>Just For You</h4>
         <button>See All</button>
       </div>
+      <Card/>
 
     </div>
 
