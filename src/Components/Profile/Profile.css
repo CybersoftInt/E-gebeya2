@@ -2,17 +2,14 @@
     display: flex;
     flex-direction: row;
     padding: 20px;
-    margin: auto;
 }
-
 
 .profile-container {
     display: flex;
-    white-space: nowrap;
-    width: 30%;
     flex-direction: column;
     background: #f9f9f9;
     padding: 20px;
+    margin-left: -60px;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -22,7 +19,7 @@
     font-weight: 600;
     font-size: 18px;
     color: #333;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
 }
 
 .profile p {
@@ -32,7 +29,7 @@
     cursor: pointer;
     margin: 8px 0;
     padding: 8px 0;
-    /* border-bottom: 1px solid #e0e0e0; */
+
 }
 
 .profile p.active {
@@ -42,7 +39,8 @@
 
 .form-container {
     flex-grow: 1;
-    margin-top: 240px;
+    text-align: left;
+    margin-top: 310px;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
@@ -52,8 +50,6 @@
 .form {
     display: flex;
     flex-direction: column;
-    text-align: left;
-    padding: 15px;
 }
 
 .form h3 {
@@ -61,7 +57,7 @@
     font-weight: 600;
     font-size: 20px;
     color: #DB4444;
-    /* margin-bottom: 20px; */
+    margin-bottom: 10px;
 }
 
 .input {
@@ -70,7 +66,7 @@
     justify-content: space-between;
     /* margin-bottom: 20px; */
     gap: 30px;
-
+    padding: 20px;
 }
 
 .input div {
@@ -86,30 +82,31 @@ label {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #555;
-    /* margin-bottom: 5px; */
+    margin-bottom: 5px;
 }
 
 input {
     width: 100%;
-    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #333;
+    background-color: #f0f0f0;
+    margin-right: 10px;
 }
 
 .password {
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
+    padding: 10px;
 }
 
 .password .pass {
-    /* margin-bottom: 20px; */
+    margin-bottom: 20px;
 }
 
 .buttons {
     display: flex;
-    margin-right: -20px;
     justify-content: flex-end;
     gap: 10px;
 }
