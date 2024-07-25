@@ -1,76 +1,151 @@
-.create_account{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 10px;
-    gap: 30px;
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
 }
-.image{
-    display: flex;
-    margin: 20px;
-    width: 805px;
-    height: 481px;
+.google {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
 }
-.image img{
-    width: fit-content;
+#btn2 {
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  background: none;
+  text-align: center;
+  align-items: center;
+  width: 371px;
+  height: 46px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
 }
-.create_form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 371px;
-    height: 530px;
-    gap: 48px;
-}
-.create_account input{
-    width: fit-content;
-    padding-bottom: 15px;
-    width: 370px;
-    height: 27px;
-    text-align:start;
-    border: none;
-    border-bottom: 2px solid black;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    opacity: 0.4;
-}
-.form{
-    gap: 10px;
-}
-#btn1{
-    padding: 16px 122px;
-    width: 371px;
-    height: 46px;
-    background: #DB4444;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-}
-#btn2{
-    box-sizing: border-box;
-    cursor: pointer;
-    display: flex;
-    background: none;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center     ;
-    padding: 16px 86px;
-    width: 371px;   
-    height: 46px;
-    border: 1px solid rgba(0, 0, 0, 0.4);
-    border-radius: 4px;
-}
-.create_form img{
-    width: 24px;
-    height: 24px;
+.l-container {
+  margin-top: 60px;
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 40px;
 }
 
+.img img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.login {
+  margin-top: 0px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  max-width: 400px;
+  margin-left: 20px;
+}
+
+.sub-login {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.sub-login h3 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.sub-login p {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333;
+}
+
+.input-container input:focus {
+  border-color: #a0c4ff;
+  outline: none;
+  box-shadow: 0 0 3px rgba(160, 196, 255, 0.5);
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn button {
+  background-color: #db4444;
+  color: #fff;
+  margin-right: 30px;
+  padding: 12px 24px;
+  border: none;
+  white-space: nowrap;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  width: 371px;
+  height: 46px;
+}
+
+.btn button:hover {
+  background-color: #c23333;
+}
+
+.btn .forgot-password {
+  color: #db4444;
+  white-space: nowrap;
+  text-decoration: none;
+  margin-right: -10px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.btn .forgot-password:hover {
+  color: #a83232;
+}
+.btn img {
+  width: 24px;
+  height: 24px;
+}
+.google button {
+    color: black;
+}
 .google {
-    gap: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+}
+.google img{
+    position: relative;
+    left: -11px;
+    top: 0px;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.google span{
+    margin-left: 51px;
 }
