@@ -20,20 +20,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
 
-<<<<<<< HEAD
-      <Navbar/>
-      <Routes>
-      <Route path='/' element={<Error/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/about' element={<About/>}/>
-        <Route path='/wishlist' element={<Wishlist/>}/>
-        <Route path='/profile' element={<Profile/>}/>
-        <Route path='/login' element={<Login/>}/>
-        <Route path='/create' element={<CreateAccount/>}/>
-        <Route path='/billing' element={<Billing/>}/>
-        {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
-=======
         <Navbar />
         <Routes>
           <Route path='/' element={<Item />} />
@@ -45,7 +31,6 @@ function App() {
           <Route path='/create' element={<CreateAccount />} />
           <Route path='/billing' element={<Billing />} />
           {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
->>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 =======
         <Navbar />
         <Routes>

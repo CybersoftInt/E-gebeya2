@@ -31,6 +31,7 @@ body {
   max-width: 1200px;
   gap: 30px;
 }
+
 .footer_content h3 {
   color: white;
 }
@@ -75,42 +76,6 @@ body {
 .support,
 .socials {
   flex: 1 1 200px;
-<<<<<<< HEAD
-}
-
-.input-container{
-  /* Send Mail */
-
-box-sizing: border-box;
-
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 12px 0px 12px 16px;
-gap: 32px;
-
-width: 217px;
-height: 48px;
-
-/* Text */
-border: 1.5px solid #FAFAFA;
-border-radius: 4px;
-
-/* Inside auto layout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
-}
-.input-container img{
-  width: 20px;
-  height: 18px;
-  position: relative;
-  top: 3px;
-  left: 2px;
-=======
->>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 }
 
 @media (min-width: 768px) {
