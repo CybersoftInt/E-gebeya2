@@ -10,10 +10,11 @@ function Card() {
         <div className="discount">
           <span>-40%</span>
         </div>
-        <img src={card_image} alt="card image " />
         <div className="card-icons">
           <img src={wish_icon} alt="wi" />
         </div>
+        <img src={card_image} alt="card image " />
+        
         <div className="card-bottom">
           <h3>HAVIT HV-G92 Gamepad</h3>
           <div className="card-price">

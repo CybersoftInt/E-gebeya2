@@ -13,6 +13,7 @@ import Login from './Components/Login/Login';
 import CreateAccount from './Components/CreateAccount/CreateAccount';
 import Item from './Components/Item/Item';
 import Cart from './Components/Cart/Cart';
+import Error from './Components/Error/Error';
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
 
       <Navbar/>
       <Routes>
-      <Route path='/' element={<Home/>}/>
+      <Route path='/' element={<Error/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/contact' element={<Contact/>}/>
         <Route path='/about' element={<About/>}/>

@@ -1,0 +1,77 @@
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 40px;
+
+  position: relative;
+  width: 829px;
+  height: 179px;
+}
+.error h1 {
+  /* 404 Not Found */
+
+  width: 829px;
+  height: 115px;
+
+  /* Heading/110PX Medium */
+  font-family: "Inter", "new", "Times New Roman";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 110px;
+  line-height: 115px;
+  /* identical to box height, or 105% */
+  letter-spacing: 0.03em;
+
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.error button {
+  /* Button */
+
+  /* Auto layout */
+  display: flex;
+  color: white;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 48px;
+  gap: 10px;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 254px;
+  height: 56px;
+
+  /* Button2 */
+  background: #db4444;
+  border-radius: 4px;
+}
+.error p {
+  /* Your visited page not found. You may go home page. */
+
+  width: 425px;
+  height: 24px;
+
+  /* Title/16PX Regular */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Text2 */
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}

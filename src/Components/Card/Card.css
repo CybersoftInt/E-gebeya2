@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
+  margin: 10px;
   gap: 16px;
 
   width: 270px;
@@ -25,41 +26,7 @@
   order: 0;
   flex-grow: 0;
 }
-.card-bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 8px;
-  width: 201px;
-  height: 84px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
-}
-.card-bottom h3{
-    /* HAVIT HV-G92 Gamepad */
 
-width: 201px;
-height: 24px;
-
-/* Title/16PX Medium */
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-/* identical to box height, or 150% */
-
-color: #000000;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
-}
 .card-price {
   display: flex;
   flex-direction: row;
@@ -77,28 +44,66 @@ flex-grow: 0;
 }
 
 .card-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   padding: 0px;
-  gap: 8px;
-
-  position: relative;
-  width: 34px;
-  height: 76px;
-  right: 12px;
-  top: 10px;
+  width: max-content;
 }
 .card-icons img {
-/* Fill Heart */
-
-width: 34px;
-height: 34px;
-
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
+  position: relative;
+  margin-left: 220px;
+  top: 0px;
+  right: 0;
+  width: 34px;
+  height: 34px;
 }
+
+.discount {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4px 12px;
+  gap: 10px;
+
+  position: relative;
+  width: 30px;
+  height: 26px;
+  left: 12px;
+  top: 12px;
+  background: #f15555;
+  border-radius: 4px;
+}
+.card-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+    width: 201px;
+    height: 84px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+  }
+  .card-bottom h3 {
+    /* HAVIT HV-G92 Gamepad */
+  
+    width: 201px;
+    height: 24px;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .card-bottom span:first-child{
+    color: #f15555;
+  }
+  .card-bottom span:nth-child(2){
+    color: grey;
+    text-decoration: line-through;
+  }

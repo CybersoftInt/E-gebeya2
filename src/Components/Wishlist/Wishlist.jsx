@@ -22,7 +22,13 @@ function Wishlist() {
         <h4>Just For You</h4>
         <button>See All</button>
       </div>
-      <Card/>
+     <div className="just-for-you">
+     <Card/>
+     <Card/>
+     <Card/>
+     <Card/>
+     <Card/>
+     </div>
 
     </div>
 
