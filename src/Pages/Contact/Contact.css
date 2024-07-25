@@ -1,50 +1,50 @@
 .page {
-    padding: 15px;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.page p {
-    /* Roadmap */
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 0px;
-    gap: 12px;
-
-    position: relative;
-    width: 130px;
-    height: 21px;
 
 
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 .container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.left,
+.right {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .left {
-
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
-    gap: 32px;
+    flex: 1;
     margin-right: 20px;
-    position: absolute;
-    width: 270px;
-    height: 366px;
-    left: 35px;
-    top: 40px;
+    margin-top: -200px;
+    margin-left: -80px;
+}
 
-
-
+.right {
+    flex: 2;
+    margin-top: -230px;
+    margin-right: 30px;
 
 }
 
+<<<<<<< HEAD
 .upper {
 
     display: flex;
@@ -120,53 +120,118 @@
     /* Primary */
     border: 1.5px solid #FFFFFF;
 
+=======
+.upper,
+.lower {
+    margin-bottom: 20px;
+>>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 }
 
 .phonetxt {
-    /* Frame 853 */
-
-    /* Auto layout */
     display: flex;
-    flex-direction: row;
     align-items: center;
-    padding: 0px;
-    gap: 16px;
+}
 
-    width: 135px;
+.phone {
+    width: 40px;
     height: 40px;
+    background: #DB4444;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
 
+.phone img {
+    width: 20px;
+    height: 20px;
+    color: #fff;
+}
 
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+form {
+    display: flex;
+    flex-direction: column;
 
 }
 
+<<<<<<< HEAD
 .page span {
     /* Call To Us */
+=======
+#contact-fieldset {
+    border: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+>>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.details input {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+}
+
+textarea {
+    width: 95%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    resize: none;
+    height: 150px;
+}
+
+.button-container {
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+button {
+    padding: 15px;
+    background: #DB4444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #b63737;
+}
+
+span {
     width: 79px;
     height: 24px;
     white-space: nowrap;
-    /* Title/16PX Medium */
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height, or 150% */
-
     color: #000000;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
 }
 
+<<<<<<< HEAD
 .lower {
 
 
@@ -299,4 +364,8 @@
     order: 2;
     flex-grow: 0;
 
+=======
+.left p {
+    text-align: left;
+>>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 }

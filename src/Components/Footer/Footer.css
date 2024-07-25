@@ -75,6 +75,7 @@ body {
 .support,
 .socials {
   flex: 1 1 200px;
+<<<<<<< HEAD
 }
 
 .input-container{
@@ -108,6 +109,8 @@ flex-grow: 0;
   position: relative;
   top: 3px;
   left: 2px;
+=======
+>>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 }
 
 @media (min-width: 768px) {
