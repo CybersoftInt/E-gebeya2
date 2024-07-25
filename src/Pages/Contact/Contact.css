@@ -11,9 +11,11 @@
 .contact-container {
     display: flex;
     flex-direction: row;
+    gap: 40px;
     justify-content: space-between;
     max-width: 1000px;
-    margin: auto;
+    margin-left: 80px;
+    margin-top: 220px;
 }
 
 .left,
@@ -33,7 +35,7 @@
 
 .right {
     flex: 2;
-    margin-top: -230px;
+    margin-top: -200px;
     margin-right: 30px;
 
 }
