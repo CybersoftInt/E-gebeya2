@@ -1,35 +1,37 @@
-import React from 'react'
-import './CreateAccount.css'
-import login_create from "../Assets/login_create.png"
+import React from 'react';
+import "./CreateAccount.css";
+import SideImage from "../Assets/Login_Side Image.png";
 import google_icon from '../Assets/google.png'
+
+
 function CreateAccount() {
     return (
-        <div class="create_account">
-            <div className="image">
-                <img src={login_create} alt="" />
+        <div className='l-container'>
+            <div className="img">
+                <img src={SideImage} alt="Shopping illustration" />
             </div>
-            <div className="create_form">
-                <div className="form_header">
-                <h1>Create an account</h1>
-                <p>Enter Your details below </p>
-                </div>
-                <div className="form">
-                <form action="">
-                    <input type="text" placeholder='Name'/><br/>
-                    <input type="email" placeholder='Email or Phone Number' /><br/>
-                    <input type="password" placeholder='Passworld' /><br/>
-                    <div className="google">
-                    <button id='btn1'>Create Account</button><br/>
-                    <button id='btn2'><img src={google_icon} alt="" />  sign up with Google </button><br/>
+            <div className="login">
+                <div className="sub-login">
+                    <h3>Create an account</h3>
+                    <p>Enter your details below</p>
+                    <div className="input-container">
+                        <input type="text" name='name' placeholder='Name' />
+                        <input type="text" name="email" placeholder='Email or Phone Number' />
+                        <input type="password" name="pass" placeholder='Password' />
                     </div>
-                    <span>Already have account ?</span><span>Log in</span>
-                </form>
+                </div>
+                <div className="btn">
+                    <button>Create Account</button>
+                    <div className="google">
+                    <button id='btn2'><img src={google_icon} alt="" />  sign up with Google </button>
+                    
+                    </div>
+                    <p><span>Already have account ?</span><a href='#'> Log in</a></p>
+
                 </div>
             </div>
-
-
         </div>
-    )
+    );
 }
 
-export default CreateAccount
+export default CreateAccount;

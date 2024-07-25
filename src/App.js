@@ -15,6 +15,7 @@ import Item from './Components/Item/Item';
 import Cart from './Components/Cart/Cart';
 import Error from './Components/Error/Error';
 
+
 function App() {
   return (
     <div className="App">
@@ -30,6 +31,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/create' element={<CreateAccount />} />
           <Route path='/billing' element={<Billing />} />
+          <Route path='/cart' element={<Cart />} />
           {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
 =======
         <Navbar />
