@@ -6,7 +6,7 @@ import google_icon from '../Assets/google.png'
 
 function CreateAccount() {
     return (
-        <div className='l-container'>
+        <div className='c-container'>
             <div className="img">
                 <img src={SideImage} alt="Shopping illustration" />
             </div>
@@ -20,7 +20,7 @@ function CreateAccount() {
                         <input type="password" name="pass" placeholder='Password' />
                     </div>
                 </div>
-                <div className="btn">
+                <div className="c-btn">
                     <button>Create Account</button>
                     <div className="google">
                     <button id='btn2'><img src={google_icon} alt="" />  sign up with Google </button>
