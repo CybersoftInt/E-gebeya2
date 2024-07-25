@@ -7,7 +7,7 @@ import EmailIcon from "../../Components/Assets/email-icon.png"
 const Contact = () => {
   return (
     <div className="page">
-      <p>Home / Contact</p>
+      <p><a href="#">Home</a> / <a href="#">Contact</a> </p>
       <div className="container">
         <div className="left">
           <div className="upper">
