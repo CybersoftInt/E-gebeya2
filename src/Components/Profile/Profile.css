@@ -17,6 +17,7 @@
 .container h3 {
     /* Manage My Account */
 }
+
 .profile-container h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
@@ -243,7 +244,9 @@ label {
     flex: none;
     order: 0;
     flex-grow: 0;
+    <<<<<<< HEAD=======
 }
+
 .profile-container input {
     width: 100%;
     border: 1px solid #ccc;
@@ -253,6 +256,7 @@ label {
     color: #333;
     background-color: #f0f0f0;
     margin-right: 10px;
+    >>>>>>>b02a7aacda740546ae67b4243ffa4871898f47fe
 }
 
 .password {
