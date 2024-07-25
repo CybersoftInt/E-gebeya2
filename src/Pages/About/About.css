@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 .about{
     width: auto;
 }
-=======
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
->>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 .story {
     display: flex;
     flex-direction: row;
@@ -27,7 +24,6 @@
     flex: 1;
 }
 
-<<<<<<< HEAD
 .about h1 {
     /* Our Story */
 
@@ -37,10 +33,9 @@
     /* Heading/54PX SemiBold */
     font-family: 'Inter';
     font-style: normal;
-=======
+}
 h1 {
     font-family: 'Inter', sans-serif;
->>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
     font-weight: 600;
     font-size: 54px;
     line-height: 64px;
@@ -130,15 +125,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-<<<<<<< HEAD
-    margin-top: 20px;
-    position: relative;
-    height: 564px;
-
-
-=======
     margin: 20px 0;
->>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
 }
 
 .indiv {

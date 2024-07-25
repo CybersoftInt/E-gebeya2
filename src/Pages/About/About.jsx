@@ -7,11 +7,7 @@ import DeliveryIcon from "../../Components/Assets/icon-delivery.png"
 
 function About() {
     return (
-<<<<<<< HEAD
-        <div className='about'>
-=======
         <div className="about-container">
->>>>>>> e42cd6a06f85ec9388b3cfe85428eb947376caca
             <div className="story">
                 <div className="text">
                     <h1>Our Story</h1>
