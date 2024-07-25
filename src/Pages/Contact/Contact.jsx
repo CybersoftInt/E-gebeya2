@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div className="page">
       <p><a href="#">Home</a> / <a href="#">Contact</a> </p>
-      <div className="container">
+      <div className="contact-container">
         <div className="left">
           <div className="upper">
             <div className="phonetxt">
@@ -34,7 +34,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="right">
-          <form className="form">
+          <form className="contact-form">
             <fieldset id='contact-fieldset'>
 
               <div className="details">

@@ -8,13 +8,7 @@
 }
 
 
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.container {
+.contact-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -71,7 +65,7 @@ h1 {
     color: #fff;
 }
 
-form {
+.right form {
     display: flex;
     flex-direction: column;
 
