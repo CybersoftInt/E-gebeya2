@@ -1,4 +1,4 @@
-button{
+.wishlist button {
     border-radius: 0px 0px 4px 4px;
     text-align: center;
     padding: 15px 30px;
@@ -7,6 +7,7 @@ button{
     text-decoration: none;
     cursor: pointer;
 }
+
 .wishlist {
     /* Cart */
     background-color: #ffffff;
@@ -113,13 +114,15 @@ button{
     transition: ease-out 0.5s;
     border-radius: 10px;
 }
+
 .wishlist-items button:hover {
     color: white;
     box-shadow: inset 0 -100px 0 0 #db4444;
-  }
+}
+
 .wishlist-items button:active {
     transform: scale(0.9);
-  }
+}
 
 .par {
     /* Frame 569 */

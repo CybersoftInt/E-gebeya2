@@ -25,14 +25,14 @@ body {
 }
 
 .login {
-    margin-top: 0px;
+    /* margin-top: 0px; */
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 40px;
     margin-top: 0px;
-    width: 300px;
-    height: 300px;
+    /* width: 300px; */
+    /* height: 300px; */
     max-width: 400px;
     margin-left: 20px;
 }
@@ -77,20 +77,24 @@ body {
 
 .btn {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
 
+
 }
 
-.btn button {
+#login-btn {
     background-color: #DB4444;
     color: #fff;
     margin-right: 30px;
+    /* margin-left: 0px; */
     padding: 12px 24px;
     border: none;
     white-space: nowrap;
     border-radius: 4px;
     cursor: pointer;
+    /* width: 100px; */
     font-size: 16px;
     transition: background-color 0.3s ease;
 }
@@ -101,6 +105,7 @@ body {
 
 .btn .forgot-password {
     color: #DB4444;
+    display: inline;
     white-space: nowrap;
     text-decoration: none;
     margin-right: -10px;

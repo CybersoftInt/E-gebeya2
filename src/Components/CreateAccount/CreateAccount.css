@@ -4,11 +4,13 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .google {
   gap: 10px;
   display: flex;
   flex-direction: column;
 }
+
 #btn2 {
   box-sizing: border-box;
   cursor: pointer;
@@ -21,6 +23,7 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.4);
   border-radius: 4px;
 }
+
 .l-container {
   margin-top: 60px;
   display: flex;
@@ -92,7 +95,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 20px;
 }
 
@@ -127,25 +130,29 @@ body {
 .btn .forgot-password:hover {
   color: #a83232;
 }
+
 .btn img {
   width: 24px;
   height: 24px;
 }
+
 .google button {
-    color: black;
-}
-.google {
-    display: flex;
-    flex-direction: row;
-}
-.google img{
-    position: relative;
-    left: -11px;
-    top: 0px;
-    text-align: center;
-    margin-left: 60px;
+  color: black;
 }
 
-.google span{
-    margin-left: 51px;
+.google {
+  display: flex;
+  flex-direction: row;
+}
+
+.google img {
+  position: relative;
+  left: -11px;
+  top: 0px;
+  text-align: center;
+  margin-left: 60px;
+}
+
+.google span {
+  margin-left: 51px;
 }

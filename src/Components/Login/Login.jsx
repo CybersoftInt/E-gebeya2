@@ -18,7 +18,7 @@ function Login() {
                     </div>
                 </div>
                 <div className="btn">
-                    <button>Log In</button>
+                    <button id='login-btn'>Log In</button>
                     <a href="#" className="forgot-password">Forgot Password?</a>
                 </div>
             </div>
