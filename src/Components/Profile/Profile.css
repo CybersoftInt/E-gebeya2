@@ -9,13 +9,8 @@
     flex-direction: column;
     background: #f9f9f9;
     padding: 20px;
-    margin-left: -60px;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.container h3 {
-    /* Manage My Account */
 }
 
 .profile-container h3 {
@@ -33,7 +28,7 @@
     cursor: pointer;
     margin: 8px 0;
     padding: 8px 0;
-
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .profile p.active {
@@ -43,8 +38,6 @@
 
 .form-container {
     flex-grow: 1;
-    text-align: left;
-    margin-top: 310px;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
@@ -56,27 +49,19 @@
     flex-direction: column;
 }
 
-.container fieldset {
-    border-style: none;
-
-}
-
-
 .form h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 20px;
     color: #DB4444;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .input {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* margin-bottom: 20px; */
-    gap: 30px;
-    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .input div {
@@ -95,173 +80,18 @@ label {
     margin-bottom: 5px;
 }
 
-.container input {
-    /* Placebox info */
-
-    width: 330px;
-    height: 50px;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
-}
-
-.lname {
-    /* Frame 842 */
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-
-    width: 330px;
-    height: 82px;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
-}
-
-.lname label {
-    /* Last Name */
-
-    width: 85px;
-    height: 24px;
-
-    /* Title/16PX Regular */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-
-    /* Text2 */
-    color: #000000;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-.email {
-    /* Frame 843 */
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-
-    width: 330px;
-    height: 82px;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-.email label {
-    /* Email */
-
-    width: 44px;
-    height: 24px;
-
-    /* Title/16PX Regular */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-
-    /* Text2 */
-    color: #000000;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-
-}
-
-.addr {
-    /* Frame 844 */
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-
-    width: 330px;
-    height: 82px;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-
-}
-
-.addr label {
-    /* Address */
-
-    width: 66px;
-    height: 24px;
-
-    /* Title/16PX Regular */
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    /* identical to box height, or 150% */
-
-    /* Text2 */
-    color: #000000;
-
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    <<<<<<< HEAD=======
-}
-
-.profile-container input {
+input {
     width: 100%;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     color: #333;
-    background-color: #f0f0f0;
-    margin-right: 10px;
-    >>>>>>>b02a7aacda740546ae67b4243ffa4871898f47fe
 }
 
 .password {
     margin-bottom: 20px;
-    padding: 10px;
 }
 
 .password .pass {
