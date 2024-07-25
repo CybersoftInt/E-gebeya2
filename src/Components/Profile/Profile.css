@@ -18,6 +18,14 @@
     /* Manage My Account */
 }
 
+.profile-container h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
 .profile p {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
@@ -236,7 +244,19 @@ label {
     flex: none;
     order: 0;
     flex-grow: 0;
+    <<<<<<< HEAD=======
+}
 
+.profile-container input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    >>>>>>>b02a7aacda740546ae67b4243ffa4871898f47fe
 }
 
 .password {

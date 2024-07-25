@@ -5,7 +5,7 @@ import insta from '../Assets/instagram-logo.png'
 import fb from '../Assets/facebook-logo.png'
 import linked from '../Assets/linkedin-logo.png'
 import tweeter from '../Assets/twitter-logo.png'
-import message_icon from "../Assets/message_icon.png"
+
 function Footer() {
   const [menu, setMenu] = useState('/')
 
@@ -16,10 +16,7 @@ function Footer() {
           <h2>E-Gebeya</h2>
           <h3>Subscribe</h3>
           <p>Get 10% off your first order</p>
-          <div className="input-container">
-          <input type="email" placeholder="Enter Your email" image />
-          <img src={message_icon} alt="" />
-          </div>
+          <input type="email" placeholder="Enter Your email" />
         </div>
         <div className="support">
           <h3>Support</h3>
