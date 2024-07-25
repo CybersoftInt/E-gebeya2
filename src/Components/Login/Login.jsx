@@ -4,7 +4,7 @@ import SideImage from "../Assets/Login_Side Image.png";
 
 function Login() {
     return (
-        <div className='container'>
+        <div className='l-container'>
             <div className="img">
                 <img src={SideImage} alt="Shopping illustration" />
             </div>
