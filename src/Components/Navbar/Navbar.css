@@ -9,6 +9,7 @@
     box-shadow: 0 1px 3px -2px black;
     font-weight: 500;
     font-family: "Poppins";
+    z-index: 999;
   }
   
   .navbar hr {
