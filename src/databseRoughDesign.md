@@ -1,24 +1,100 @@
-# Product: Contains details about the product.
-- P-ID(Primary Key): Unique  identifier for each product.
-- Name: Name of the product.
-- Price: Price of the product.
-- Description: Description of the product.
-- image: src of the image
-- catagory: catagory of the product
+Table "Person" {
+  "UserID" INT [pk, increment]
+  "FirstName" NVARCHAR(100)
+  "LastName" NVARCHAR(100)
+  "Email" NVARCHAR(100) [unique, not null]
+  "Password" NVARCHAR(255) [not null]
+  "AddressID" int [ref: > Addresse.AddressID]
+  "PhoneNumber" NVARCHAR(20)
+  "Role" NVARCHAR(50)
+}
 
-# Order: Contains details about the orders.
-- Order – ID(Primary Key): Unique identifier for each order.
-- Order – Amount: Amount of the order.
-- Order – Date: Date on which the order is placed.
-- order - price: Price of the order
-# Customer: Store information about the customers.
-- User – ID(Primary Key): Unique identifier for each user or customer.
-- Name: Name of the user.
-- Email: Email of the user.
-- Password: Password of the user.
-# Payment: Contains details about the payment.
+Table "Products" {
+  "ProductID" INT [pk, increment]
+  "Name" NVARCHAR(100)
+  "Description" NVARCHAR(MAX)
+  "Price" DECIMAL(10,2)
+  "CategoryID" INT
+  "StockQuantity" INT
+  "ImageURL" NVARCHAR(255)
+  "Brand" NVARCHAR(100)
+}
+Table "Addresse" {
+  "AddressID" int [pk]
+  "UserID" int [ref: > Person.UserID]
+  "StreetAddress" varchar(100)
+  "City" varchar(50)
+  "Region" varchar(50)
+  "Country" varchar(50)
+  "IsDefault" bit
+}
 
-- Payment – ID(Primary Key): Unique identifier for each payment.
-- Type: Payment methods like UPI or Credit Card etc.
-- Amount: Total amount paid by user.
+Table "Categories" {
+  "CategoryID" INT [pk, increment]
+  "Name" NVARCHAR(100)
+  "Description" NVARCHAR(255)
+}
 
+Table "Orders" {
+  "OrderID" INT [pk, increment]
+  "UserID" INT
+  "OrderDate" DATETIME
+  "TotalAmount" DECIMAL(10,2)
+  "Status" NVARCHAR(50)
+  "ShippingAddress" NVARCHAR(255)
+}
+
+Table "OrderItems" {
+  "OrderItemID" INT [pk, increment]
+  "OrderID" INT
+  "ProductID" INT
+  "Quantity" INT
+  "Price" DECIMAL(10,2)
+}
+
+Table "ShoppingCart" {
+  "CartID" INT [pk, increment]
+  "UserID" INT
+}
+
+Table "CartItems" {
+  "CartItemID" INT [pk, increment]
+  "CartID" INT
+  "ProductID" INT
+  "Quantity" INT
+}
+
+Table "Payments" {
+  "PaymentID" INT [pk, increment]
+  "OrderID" INT
+  "PaymentDate" DATETIME
+  "Amount" DECIMAL(10,2)
+  "PaymentMethod" NVARCHAR(50)
+  "PaymentStatus" NVARCHAR(50)
+}
+
+Table "Shipments" {
+  "ShipmentID" INT [pk, increment]
+  "OrderID" INT
+  "ShipmentDate" DATETIME
+  "TrackingNumber" NVARCHAR(100)
+  "EstimatedDeliveryDate" DATETIME
+}
+
+Ref:"Categories"."CategoryID" < "Products"."CategoryID"
+
+Ref:"Person"."UserID" < "Orders"."UserID"
+
+Ref:"Orders"."OrderID" < "OrderItems"."OrderID"
+
+Ref:"Products"."ProductID" < "OrderItems"."ProductID"
+
+Ref:"Person"."UserID" < "ShoppingCart"."UserID"
+
+Ref:"ShoppingCart"."CartID" < "CartItems"."CartID"
+
+Ref:"Products"."ProductID" < "CartItems"."ProductID"
+
+Ref:"Orders"."OrderID" < "Payments"."OrderID"
+
+Ref:"Orders"."OrderID" < "Shipments"."OrderID"
