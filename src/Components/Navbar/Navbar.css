@@ -10,6 +10,7 @@
     font-weight: 500;
     font-family: "Poppins";
     z-index: 999;
+    background-color: white;
   }
   
   .navbar hr {

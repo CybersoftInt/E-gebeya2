@@ -1,6 +1,7 @@
 .item {
   display: flex;
   flex-direction: column;
+  background-color: white;
 }
 
 .item_details {
@@ -14,7 +15,7 @@
 .item_dir {
   display: flex;
   position: relative;
-  left: 5px;
+  left: -405px;
   top: 0;
 }
 .item_images {
@@ -48,23 +49,17 @@
   top: 5px;
   width: 170px;
   height: 138px;
-
-  /* Secondary */
-  background: #f5f5f5;
-  border-radius: 4px;
 }
 .main_image {
   /* Frame 927 */
 
   position: relative;
   width: 500px;
-  height: 500px;
+  height: 550px;
 
   /* Secondary */
   background: #f5f5f5;
   border-radius: 4px;
-
-  background: #f5f5f5;
 }
 .main_image img {
   /* image 63 */
@@ -73,8 +68,7 @@
   width: 446px;
   height: 315px;
   left: 27px;
-  top: 84px;
-
+  top: 154px;
   border-radius: 2px;
 }
 .item_disc {
@@ -87,7 +81,7 @@
   /* Heading/24PX SemiBold */
   font-family: "Inter";
   font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 24px;
   line-height: 24px;
   letter-spacing: 0.03em;
@@ -99,14 +93,149 @@
   font-size: 24px;
   line-height: 24px;
 }
-.size {
+.discription {
+  width: 373px;
+  height: 63px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}
+.color-container {
+  /* Frame 933 */
+
+  /* Auto layout */
   display: flex;
   flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 24px;
+
+  position: relative;
+  width: 155px;
+  height: 20px;
+}
+.color-container h1 {
+  /* Colours: */
+
+  width: 83px;
+  height: 20px;
+
+  /* Heading/20PX Regular */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  /* identical to box height, or 100% */
+  letter-spacing: 0.03em;
+
+  color: #000000;
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.colors {
+  display: flex;
+  align-items: center;
+  /* Colour Chnage */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 8px;
+}
+
+.colors input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 8px;
+  outline: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+.colors input[type="radio"]:first-child {
+  background-color: rgb(225, 19, 53);
+}
+
+.colors input[type="radio"]:last-child {
+  background-color: rgb(30, 144, 255);
+}
+
+.colors input[type="radio"]:checked {
+  border: 4px solid #000000;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.product-size {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+.product-size h3 {
+  /* Colours: */
+
+  width: 83;
+  height: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.03em;
+  color: #000000;
+}
+.size-options {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+  width: 224px;
+  align-self: center;
+  height: 32px;
+}
+
+.size-options input[type="radio"] {
+  display: none;
+}
+
+.size-options label {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  align-self: center;
+}
+
+.size-options input[type="radio"]:checked + label {
+  background-color: #db4444;
+  color: #fff;
+  border-color: #db4444;
+}
+
+.size-options label:hover {
+  background-color: #f5f5f5;
 }
 .buy_ammount {
   display: flex;
   flex-direction: row;
   margin: 15px;
+  text-align: center;
   gap: 10px;
 }
 .buy_ammount button {
@@ -148,10 +277,7 @@
   transform: scale(0.9);
 }
 .buy_ammount span:first-child {
-  /* Frame 906 */
-
   width: 40px;
-
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px 0px 0px 4px;
   order: 0;
@@ -160,23 +286,17 @@
 }
 .buy_ammount span:nth-child(2) {
   width: 80px;
-
   border-width: 1px 0px;
   border-style: solid;
   border-color: rgba(0, 0, 0, 0.5);
   text-align: center;
-
-  /* Inside auto layout */
   order: 1;
   flex-grow: 0;
   margin: 0px -1px;
 }
 .buy_ammount span:nth-child(3) {
-  /* Frame 907 */
   margin-left: 0;
   width: 41px;
-
-  /* Secondary 2 */
   background: #db4444;
   border-radius: 0px 4px 4px 0px;
   order: 2;
@@ -184,15 +304,11 @@
 }
 
 .add-minus {
-  /* Frame 935 */
-
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 0px;
-
   position: relative;
   width: 159px;
   height: 44px;
@@ -200,20 +316,14 @@
 .delivery {
   display: flex;
   flex-direction: column;
-  /* Frame 937 */
-
   box-sizing: border-box;
-
   position: relative;
   width: 399px;
   height: 180px;
-
   border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 }
 #minus {
-  /* icon-minus */
-
   position: absolute;
   width: 24px;
   height: 24px;
@@ -249,9 +359,6 @@
   top: 4px;
 }
 .free {
-  /* Frame 915 */
-
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -326,63 +433,57 @@
   order: 0;
   flex-grow: 0;
 }
-.related_item{
+.related_item {
   /* Frame 938 */
 
-/* Auto layout */
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-gap: 60px;
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 60px;
 
-position: relative;
-width: 1170px;
-height: 450px;
-
-
+  position: relative;
+  width: 1170px;
+  height: 450px;
 }
-.related_header{
+.related_header {
   /* Frame 923 */
 
-/* Auto layout */
-display: flex;
-flex-direction: row;
-align-items: center;
-padding: 0px;
-gap: 16px;
+  /* Auto layout */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 16px;
 
-width: 140px;
-height: 40px;
+  width: 140px;
+  height: 40px;
 
-
-/* Inside auto layout */
-flex: none;
-order: 0;
-flex-grow: 0;
-
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
 }
-.related_header span{
+.related_header span {
   /* Related Item */
 
-width: 104px;
-height: 20px;
+  width: 104px;
+  height: 20px;
 
-/* Title/16PX Semibold */
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 20px;
-/* identical to box height, or 125% */
+  /* Title/16PX Semibold */
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
 
-/* Secondary 2 */
-color: #DB4444;
+  /* Secondary 2 */
+  color: #db4444;
 
-
-/* Inside autlayout */
-flex: none;
-order: 1;
-flex-grow: 0;
-
+  /* Inside autlayout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
 }
