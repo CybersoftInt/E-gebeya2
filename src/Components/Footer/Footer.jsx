@@ -31,19 +31,19 @@ function Footer() {
           <h3>Account</h3>
           <ul>
             <li onClick={() => { setMenu('profile') }}>
-              <Link to="/profile">My Account</Link>
+              <Link to="/profile"  style={{ textDecoration: 'none', color: "white" }}>My Account</Link>
             </li>
             <li onClick={() => { setMenu('profile') }}>
-              <Link to="/profile">Login / Register</Link>
+              <Link to="/login"  style={{ textDecoration: 'none', color: "white" }}>Login / Register</Link>
             </li>
             <li onClick={() => { setMenu('cart') }}>
-              <Link style={{ textDecoration: 'none' }} to="/cart">Cart</Link>
+              <Link  style={{ textDecoration: 'none', color: "white" }} to="/cart">Cart</Link>
             </li>
             <li onClick={() => { setMenu('wishlist') }}>
-              <Link to="/wishlist">Wishlist</Link>
+              <Link to="/wishlist"  style={{ textDecoration: 'none', color: "white" }}>Wishlist</Link>
             </li>
             <li onClick={() => { setMenu('profile') }}>
-              <Link style={{ textDecoration: 'none' }} to="/profile">Shop</Link>
+              <Link  style={{ textDecoration: 'none', color: "white" }} to="/shop">Shop</Link>
             </li>
           </ul>
         </div>
@@ -53,7 +53,7 @@ function Footer() {
             <li>Privacy Policy</li>
             <li>Terms of Use</li>
             <li>FAQ</li>
-            <li>Contact</li>
+            <li><Link  to="/contact" style={{ textDecoration: 'none', color: "white" }}>Contact</Link> </li>
           </ul>
         </div>
         <div className="socials">

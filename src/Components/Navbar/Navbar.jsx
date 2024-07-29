@@ -27,8 +27,8 @@ function Navbar() {
         <li onClick={() => {setMenu('about')}}>
           <Link  style={{ textDecoration: 'none'}} to="/about">About</Link>
           {menu==='about'? <hr/>:<></>}</li>
-          <li onClick={()=>{setMenu('login')}}><Link  style={{ textDecoration: 'none'}} to="/login">Sign Up</Link>
-          {menu==='login'? <hr/>:<></>}</li>  
+          <li onClick={()=>{setMenu('login')}}><Link  style={{ textDecoration: 'none'}} to="/create">Sign Up</Link>
+          {menu==='create'? <hr/>:<></>}</li>  
         </ul>
         <div className="nav-search">
         <input type="search" placeholder='What are you looking for?' />

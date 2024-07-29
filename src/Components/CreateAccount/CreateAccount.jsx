@@ -2,6 +2,7 @@ import React from 'react';
 import "./CreateAccount.css";
 import SideImage from "../Assets/Login_Side Image.png";
 import google_icon from '../Assets/google.png'
+import { Link } from 'react-router-dom'
 
 
 function CreateAccount() {
@@ -10,7 +11,7 @@ function CreateAccount() {
             <div className="img">
                 <img src={SideImage} alt="Shopping illustration" />
             </div>
-            <div className="login">
+            <div className="create">
                 <div className="sub-login">
                     <h3>Create an account</h3>
                     <p>Enter your details below</p>
@@ -26,7 +27,7 @@ function CreateAccount() {
                     <button id='btn2'><img src={google_icon} alt="" />  sign up with Google </button>
                     
                     </div>
-                    <p><span>Already have account ?</span><a href='#'> Log in</a></p>
+                    <p><span>Already have account ?</span><Link to="/login"><span id="login">log in</span></Link></p>
 
                 </div>
             </div>

@@ -35,7 +35,11 @@ body {
   box-sizing: border-box;
   margin-bottom: 40px;
 }
-
+#login {
+  text-decoration: none;
+  color: blue;
+  
+}
 .img img {
   width: 100%;
   max-width: 600px;
@@ -43,7 +47,7 @@ body {
   border-radius: 8px;
 }
 
-.login {
+.create {
   margin-top: 0px;
   background: #ffffff;
   border-radius: 8px;
