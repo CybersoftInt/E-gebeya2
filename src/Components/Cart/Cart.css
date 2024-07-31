@@ -3,11 +3,11 @@
   flex-direction: column;
   font-family: "Poppins";
   background-color: white;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
-.cart button:active {
-  transform: scale(0.9);
+.dir{
+  margin: 20px;
 }
 
 .cart-body {
@@ -15,7 +15,7 @@
   flex-direction: column;
   align-items: flex-start;
   padding: 0px;
-  gap: 80px;
+  gap: 60px;
   width: 1170px;
 }
 
@@ -27,6 +27,7 @@
   gap: 173px;
   width: 1170px;
   height: 324px;
+  margin: 10px;
 }
 
 .update-cart {
@@ -88,23 +89,6 @@
   order: 1;
   flex-grow: 0;
 }
-.cart-total button {
-  /* Button */
-
-  /* Auto layout */
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 48px;
-  gap: 10px;
-
-  position: relative;
-  width: 260px;
-  height: 56px;
-  left: 89px;
-  top: 156px;
-}
 
 .price3 {
   /* Frame 794 */
@@ -150,15 +134,16 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 48px;
+  padding: 16px 40px;
   gap: 10px;
   position: absolute;
   width: 260px;
   height: 56px;
   left: 89px;
   top: 236px;
-  background: #db4444;
   color: white;
+  background-color: #DB4444;
+  border: none;
   border-radius: 4px;
 }
 .cart-total h1 {
@@ -277,7 +262,6 @@
 }
 
 .subtotal th {
-  background-color: #f0f0f0;
   padding: 12px 10px;
   text-align: center;
   font-weight: normal;
@@ -289,6 +273,12 @@
   border-bottom: 1px solid #ddd;
   text-align: center;
   justify-content: center;
+}
+.subtotal tr,
+.subtotal th , .subtotal td {
+  background: #ffffff;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
 }
 
 .subtotal td:first-child {

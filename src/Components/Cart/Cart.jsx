@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cart.css";
 import CartProduct from "../CartProduct/CartProduct";
-
+import cart_image from "../Assets/joystick_red.png"
 function Cart() {
   const subtotal_price = 1750;
   const total_price = 1750;
@@ -37,7 +37,7 @@ function Cart() {
           </div>
         </div>
         <div className="update-cart">
-          {/* <div className="subtotal">
+          <div className="subtotal">
             <table>
               <tr>
                 <th>Product</th>
@@ -47,7 +47,7 @@ function Cart() {
               </tr>
               <tr>
                 <td>
-                  <img src="" alt="" />
+                  <img src={cart_image} alt="" />
                   <span>LCD Monitor</span>
                 </td>
                 <td>
@@ -77,22 +77,7 @@ function Cart() {
               </tr>
               <tr>
                 <td>
-                  <img src="" alt="" />
-                  <span>LCD Monitor</span>
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-                <td>
-                  <input type="number" name="" id="" />
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="" alt="" />
+                  <img src={cart_image} alt="" />
                   <span>LCD Monitor</span>
                 </td>
                 <td>
@@ -106,8 +91,7 @@ function Cart() {
                 </td>
               </tr>
             </table>
-          </div> */}
-          <CartProduct/>
+          </div>
           <div className="sub-btns">
             <button>Return To Shop</button>
             <button>Update Cart</button>
