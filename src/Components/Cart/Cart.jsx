@@ -8,7 +8,7 @@ function Cart() {
 
   return (
     <div className="cart">
-      <div className="dir">
+      <div className="page">
         <a href="#">Home</a>/<a href="#">Cart</a>
       </div>
       <div className="cart-body">

@@ -16,8 +16,7 @@ function Item() {
     <div className="item">
       <div className="item_dir">
         <p>
-          <a href="#">Account</a>/<a href="#">Gaming</a>/
-          <a href="#">Havic HV G-92 Gamepad</a>
+          <a href="#">Account</a> / <a href="#">Gaming</a> / <a href="#">Havic HV G-92 Gamepad</a>
         </p>
       </div>
       <div className="item_details">

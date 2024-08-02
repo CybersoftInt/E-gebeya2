@@ -27,6 +27,7 @@ button{
 button:hover {
   background: #DB4444;
   color: white;
+  border: 1px solid #DB4444;
 }
 button:active {
   transform: scale(0.97);

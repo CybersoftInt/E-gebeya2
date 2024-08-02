@@ -17,6 +17,12 @@
   position: relative;
   left: -405px;
   top: 0;
+  padding: 30px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  text-align: left;
+  max-width: 1200px;
+  margin: 0 10px;
 }
 .item_images {
   display: flex;
@@ -118,12 +124,8 @@
   height: 20px;
 }
 .color-container h1 {
-  /* Colours: */
-
   width: 83px;
-  height: 20px;
-
-  /* Heading/20PX Regular */
+  height: 40px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
@@ -131,17 +133,15 @@
   line-height: 20px;
   /* identical to box height, or 100% */
   letter-spacing: 0.03em;
+  align-self: center;
 
   color: #000000;
 
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
 }
 .colors {
   display: flex;
   align-items: center;
+
   /* Colour Chnage */
 
   /* Auto layout */
@@ -178,7 +178,9 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 .product-size {
-  margin-bottom: 20px;
+  padding-top: 0;
+  gap: 15px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: row;
 }
