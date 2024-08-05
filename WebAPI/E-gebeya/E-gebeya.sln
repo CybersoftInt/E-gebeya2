@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.7.34031.279
+VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-gebeya", "E-gebeya\E-gebeya.csproj", "{453D5D73-8B65-4F79-8761-6E79325A4886}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-gebeya", "E-gebeya\E-gebeya.csproj", "{63E0903D-3257-4710-85A7-0A0F897EF70F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{453D5D73-8B65-4F79-8761-6E79325A4886}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{453D5D73-8B65-4F79-8761-6E79325A4886}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{453D5D73-8B65-4F79-8761-6E79325A4886}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{453D5D73-8B65-4F79-8761-6E79325A4886}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63E0903D-3257-4710-85A7-0A0F897EF70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E0903D-3257-4710-85A7-0A0F897EF70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E0903D-3257-4710-85A7-0A0F897EF70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E0903D-3257-4710-85A7-0A0F897EF70F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {7AF17E50-47B0-40C0-93CA-D9C2C8E10B39}
+		SolutionGuid = {1CCDD785-2FDD-4984-A5DD-8E6900B5DC52}
 	EndGlobalSection
 EndGlobal

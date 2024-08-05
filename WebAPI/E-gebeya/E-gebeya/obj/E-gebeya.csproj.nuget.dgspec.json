@@ -1,32 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Henok\\Desktop\\ASP projects\\E-gebeya\\E-gebeya\\E-gebeya.csproj": {}
+    "C:\\Users\\hp\\source\\repos\\E-gebeya\\E-gebeya\\E-gebeya.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Henok\\Desktop\\ASP projects\\E-gebeya\\E-gebeya\\E-gebeya.csproj": {
+    "C:\\Users\\hp\\source\\repos\\E-gebeya\\E-gebeya\\E-gebeya.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Henok\\Desktop\\ASP projects\\E-gebeya\\E-gebeya\\E-gebeya.csproj",
+        "projectUniqueName": "C:\\Users\\hp\\source\\repos\\E-gebeya\\E-gebeya\\E-gebeya.csproj",
         "projectName": "E-gebeya",
-        "projectPath": "C:\\Users\\Henok\\Desktop\\ASP projects\\E-gebeya\\E-gebeya\\E-gebeya.csproj",
-        "packagesPath": "C:\\Users\\Henok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Henok\\Desktop\\ASP projects\\E-gebeya\\E-gebeya\\obj\\",
+        "projectPath": "C:\\Users\\hp\\source\\repos\\E-gebeya\\E-gebeya\\E-gebeya.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hp\\source\\repos\\E-gebeya\\E-gebeya\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Henok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -34,15 +35,20 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
-            "Microsoft.EntityFrameworkCore": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[6.4.0, )"
             }
           },
           "imports": [
@@ -64,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
