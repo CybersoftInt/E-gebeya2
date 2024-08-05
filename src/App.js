@@ -23,7 +23,7 @@ function App() {
 
         <Navbar />
         <Routes>
-          <Route path='/' element={<Item />} />
+          <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
           <Route path='/wishlist' element={<Wishlist />} />
@@ -32,6 +32,7 @@ function App() {
           <Route path='/create' element={<CreateAccount />} />
           <Route path='/billing' element={<Billing />} />
           <Route path='/cart' element={<Cart />} />
+          <Route path='/item' element={<Item />} />
           {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
 =======
         <Navbar />
