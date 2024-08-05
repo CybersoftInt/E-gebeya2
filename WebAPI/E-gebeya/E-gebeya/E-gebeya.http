@@ -1,6 +1,0 @@
-@E_gebeya_HostAddress = http://localhost:5072
-
-GET {{E_gebeya_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
