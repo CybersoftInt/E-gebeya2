@@ -428,19 +428,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\hp\\.nuget\\packages\\": {}
+    "C:\\Users\\Henok\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\CODE\\HTML\\front end mentor\\E-gebeya\\WebAPI\\E-gebeyaAPI\\E-gebeyaAPI\\E-gebeyaAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Henok\\Desktop\\GitProjects\\E-gebeya2\\WebAPI\\E-gebeyaAPI\\E-gebeyaAPI\\E-gebeyaAPI.csproj",
       "projectName": "E-gebeyaAPI",
-      "projectPath": "H:\\CODE\\HTML\\front end mentor\\E-gebeya\\WebAPI\\E-gebeyaAPI\\E-gebeyaAPI\\E-gebeyaAPI.csproj",
-      "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-      "outputPath": "H:\\CODE\\HTML\\front end mentor\\E-gebeya\\WebAPI\\E-gebeyaAPI\\E-gebeyaAPI\\obj\\",
+      "projectPath": "C:\\Users\\Henok\\Desktop\\GitProjects\\E-gebeya2\\WebAPI\\E-gebeyaAPI\\E-gebeyaAPI\\E-gebeyaAPI.csproj",
+      "packagesPath": "C:\\Users\\Henok\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Henok\\Desktop\\GitProjects\\E-gebeya2\\WebAPI\\E-gebeyaAPI\\E-gebeyaAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Henok\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
