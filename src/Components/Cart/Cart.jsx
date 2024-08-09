@@ -1,10 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Cart.css";
 import CartProduct from "../CartProduct/CartProduct";
-import cart_image from "../Assets/joystick_red.png"
+import cart_image from "../Assets/joystick_red.png";
+
 function Cart() {
-  const subtotal_price = 1750;
+  const price = 650;
   const total_price = 1750;
+  const [num1, setNum1] = useState(1);
+  const [price1, setPrice1] = useState(price);
+  const [subtotalPrice1, setSubtotalPrice1] = useState(price);
+
+  let listProducts = [];
+  const initApp = () => {
+    fetch('./data2.json')
+      .then(response => response.json())
+      .then(data => {
+        listProducts = data;
+        console.log(listProducts);
+      });
+  };
+  // initApp();
+
+  const handleInputChange = (e) => {
+    calculateSubtotal();
+    setNum1(e.target.value++);
+
+  };
+
+  const calculateSubtotal = () => {
+    const subtotal = (price * num1)-price;
+    setSubtotalPrice1(subtotal);
+  };
 
   return (
     <div className="cart">
@@ -21,7 +47,7 @@ function Cart() {
             <h1>Cart Total</h1>
             <div className="price1">
               <span>Subtotal:</span>
-              <span>{subtotal_price}</span>
+              <span>${subtotalPrice1.toFixed(2)}</span>
             </div>
             <hr />
             <div className="price2">
@@ -31,7 +57,7 @@ function Cart() {
             <hr />
             <div className="price3">
               <span>Total:</span>
-              <span>{total_price}</span>
+              <span>${total_price.toFixed(2)}</span>
             </div>
             <button>Procees to checkout</button>
           </div>
@@ -39,57 +65,36 @@ function Cart() {
         <div className="update-cart">
           <div className="subtotal">
             <table>
-              <tr>
-                <th>Product</th>
-                <th>price</th>
-                <th>Quantity</th>
-                <th>Subtotal</th>
-              </tr>
-              <tr>
-                <td>
-                  <img src={cart_image} alt="" />
-                  <span>LCD Monitor</span>
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-                <td>
-                  <input type="number" name="" id="" />
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src="" alt="" />
-                  <span>LCD Monitor</span>
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-                <td>
-                  <input type="number" name="" id="" />
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <img src={cart_image} alt="" />
-                  <span>LCD Monitor</span>
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-                <td>
-                  <input type="number" name="" id="" />
-                </td>
-                <td>
-                  <span>$650</span>
-                </td>
-              </tr>
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Price</th>
+                  <th>Quantity</th>
+                  <th>Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* <tr>
+                  <td>
+                    <img src={cart_image} alt="" />
+                    <span>LCD Monitor</span>
+                  </td>
+                  <td>
+                    <span>${price.toFixed(2)}</span>
+                  </td>
+                  <td>
+                    <input type="number" min={0} value={num1} onChange={handleInputChange} />
+                  </td>
+                  <td>
+                    <span>${subtotalPrice1.toFixed(2)}</span>
+                  </td>
+                </tr> */}
+                {/* Add more rows as needed */}
+                <CartProduct/>
+                <CartProduct/>
+
+              </tbody>
+              
             </table>
           </div>
           <div className="sub-btns">
