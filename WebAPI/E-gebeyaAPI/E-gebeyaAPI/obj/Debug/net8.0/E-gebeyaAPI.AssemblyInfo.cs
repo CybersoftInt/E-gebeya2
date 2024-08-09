@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("E-gebeyaAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b243ab7d360c8257f21e47980cc116cbf609a9c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+add4b8f9b4d90db4fcbf38b75cd59b0bc9c452b3")]
 [assembly: System.Reflection.AssemblyProductAttribute("E-gebeyaAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("E-gebeyaAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
