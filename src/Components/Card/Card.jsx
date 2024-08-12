@@ -1,10 +1,12 @@
-import React from "react";
+
 import wishimg from "../Assets/Gucci_bag.png";
 import "./Card.css";
 import card_image from "../Assets/redjoystick.png";
 import wish_icon from "../Assets/wishlist-icon.png";
-function Card() {
-  return (
+import Data from './data2.json'
+import React, {useState}from 'react'
+function Card({product}) {
+  return ( 
     <div className="card">
       <div className="card-top">
         <div className="discount">
@@ -14,11 +16,11 @@ function Card() {
           <img src={wish_icon} alt="wi" />
         </div>
         <img src={card_image} alt="card image " />
-        
+      
         <div className="card-bottom">
           <h3>HAVIT HV-G92 Gamepad</h3>
           <div className="card-price">
-          <span>$120</span>
+          <span>$655</span>
           <span>$160</span>
           </div>
         </div>

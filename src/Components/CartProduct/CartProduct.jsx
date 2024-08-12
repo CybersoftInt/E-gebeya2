@@ -4,11 +4,12 @@ import "../Cart/Cart.css";
 import cart_image from "../Assets/joystick_red.png";
 
 function CartProduct() {
-  const price = 650;
-  const total_price = 1750;
+  const price = 699.99;
+  const total_price = 1899;
   const [num1, setNum1] = useState(1);
   const [price1, setPrice1] = useState(price);
   const [subtotalPrice1, setSubtotalPrice1] = useState(price);
+  const  stockQuantity = 10;
 
   const handleInputChange = (e) => {
     const newQuantity = parseInt(e.target.value);
@@ -25,13 +26,13 @@ function CartProduct() {
     <tr>
       <td>
         <img src={cart_image} alt="" />
-        <span>LCD Monitor</span>
+        <span>PS5 Wireless Controller</span>
       </td>
       <td>
         <span>${price.toFixed(2)}</span>
       </td>
       <td>
-        <input type="number" min={0} value={num1} onChange={handleInputChange} />
+        <input type="number" min={0} max={stockQuantity} value={num1} onChange={handleInputChange} />
       </td>
       <td>
         <span>${subtotalPrice1.toFixed(2)}</span>

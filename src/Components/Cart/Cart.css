@@ -28,6 +28,7 @@
   width: 1170px;
   height: 324px;
   margin: 10px;
+  padding: 3px;
 }
 
 .update-cart {
@@ -36,9 +37,7 @@
   align-items: flex-start;
   padding: 0px;
   gap: 24px;
-  order: 1;
-  flex-grow: 0;
-}
+  order: 1;}
 
 .coupon {
   display: flex;
@@ -85,15 +84,9 @@
   border: 1.5px solid #000000;
   border-radius: 4px;
   position: relative;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
 .price3 {
-  /* Frame 794 */
-
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -277,7 +270,6 @@
 .subtotal tr,
 .subtotal th , .subtotal td {
   background: #ffffff;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.05);
   border-radius: 4px;
 }
 
@@ -304,9 +296,6 @@
   text-align: center;
 }
 .sub-btns {
-  /* Frame 804 */
-
-  /* Auto layout */
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -315,11 +304,9 @@
 
   width: 1170px;
   height: 56px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
+}
+.check-coupon{
+  width: max-content;
 }
 .sub-btns button {
   /* Button */

@@ -1,0 +1,64 @@
+{
+    "products": [
+    {
+        "id": "001",
+        "name": "TestProduct",
+        "description": "its is a test product",
+        "price": 200,
+        "catagoryId": "11",
+        "color": "black",
+        "size": "M",
+        "stockQuantity": 100,
+        "imageUrl": "./src/Components/Assets/ipad_gaming.png",
+        "brand": "NBA"
+    },
+    {
+        "id": "002",
+        "name": "Gaming Laptop",
+        "description": "A powerful gaming laptop for the ultimate gaming experience",
+        "price": 1299.99,
+        "catagoryId": "12",
+        "color": "grey",
+        "size": "N/A",
+        "stockQuantity": 50,
+        "imageUrl": "./src/Components/Assets/ipad_gaming.png",
+        "brand": "Razer"
+    },
+    {
+        "id": "003",
+        "name": "Wireless Gaming Mouse",
+        "description": "High-precision wireless mouse for gaming enthusiasts",
+        "price": 79.99,
+        "catagoryId": "13",
+        "color": "black",
+        "size": "N/A",
+        "stockQuantity": 75,
+        "imageUrl": "./src/Components/Assets/ipad_gaming.png",
+        "brand": "Logitech"
+    },
+    {
+        "id": "004",
+        "name": "Gaming Headset",
+        "description": "Immersive audio experience for gamers",
+        "price": 99.99,
+        "catagoryId": "14",
+        "color": "red",
+        "size": "N/A",
+        "stockQuantity": 60,
+        "imageUrl": "./src/Components/Assets/ipad_gaming.png",
+        "brand": "HyperX"
+    },
+    {
+        "id": "005",
+        "name": "Gaming Keyboard",
+        "description": "Responsive and customizable keyboard for gaming",
+        "price": 129.99,
+        "catagoryId": "15",
+        "color": "black",
+        "size": "N/A",
+        "stockQuantity": 40,
+        "imageUrl": "./src/Components/Assets/ipad_gaming.png",
+        "brand": "Corsair"
+    }
+]
+}

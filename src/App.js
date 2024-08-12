@@ -14,6 +14,7 @@ import CreateAccount from './Components/CreateAccount/CreateAccount';
 import Item from './Components/Item/Item';
 import Cart from './Components/Cart/Cart';
 import Error from './Components/Error/Error';
+import Shop from './Pages/Shop/Shop';
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
           <Route path='/billing' element={<Billing />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/item' element={<Item />} />
+          <Route path='/shop' element={<Shop />} />
+
           {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
 =======
         <Navbar />
