@@ -1,0 +1,21 @@
+/* src/Components/CategoryList/CategoryList.css */
+
+.category-list {
+    padding: 20px;
+  }
+  
+  .category-list h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .category-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .category-list li {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  

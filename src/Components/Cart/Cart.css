@@ -1,7 +1,12 @@
 .cart {
   display: flex;
   flex-direction: column;
-  font-family: "Poppins";
+  align-items: center;
+  padding: 20px;
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   background-color: white;
   margin-bottom: 150px;
 }
@@ -17,6 +22,7 @@
   padding: 0px;
   gap: 60px;
   width: 1170px;
+  margin-bottom: 350px;
 }
 
 .checkout {

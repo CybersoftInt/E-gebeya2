@@ -1,0 +1,47 @@
+import wishimg from "../Assets/Gucci_bag.png";
+import "./Card.css";
+import card_image from "../Assets/redjoystick.png";
+import wish_icon from "../Assets/wishlist-icon.png";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function Card() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('/api/products');
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error fetching products:', error);
+      }
+    };
+    fetchProducts();
+  }, []);
+
+  return (
+    <div className="card">
+      {products.map((product) => (
+        <div key={product.id} className="card-top">
+          <div className="discount">
+            <span>-40%</span>
+          </div>
+          <div className="card-icons">
+            <img src={wish_icon} alt="wi" />
+          </div>
+          <img src={product.imageUrl || card_image} alt="card image" />
+          <div className="card-bottom">
+            <h3>{product.name}</h3>
+            <div className="card-price">
+              <span>${product.price}</span>
+              <span>${(product.price * 0.6).toFixed(2)}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Card;

@@ -22,6 +22,7 @@ function CartProduct() {
     setSubtotalPrice1(subtotal);
   };
 
+
   return (
     <tr>
       <td>
@@ -29,13 +30,13 @@ function CartProduct() {
         <span>PS5 Wireless Controller</span>
       </td>
       <td>
-        <span>${price.toFixed(2)}</span>
+        <span>${price}</span>
       </td>
       <td>
         <input type="number" min={0} max={stockQuantity} value={num1} onChange={handleInputChange} />
       </td>
       <td>
-        <span>${subtotalPrice1.toFixed(2)}</span>
+        <span>${subtotalPrice1}</span>
       </td>
     </tr>
   );
