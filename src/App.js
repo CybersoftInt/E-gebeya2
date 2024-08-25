@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
 import Billing from './Components/Billing/Billing';
 import Wishlist from './Components/Wishlist/Wishlist';
@@ -15,13 +15,22 @@ import Item from './Components/Item/Item';
 import Cart from './Components/Cart/Cart';
 import Error from './Components/Error/Error';
 import Shop from './Pages/Shop/Shop';
+import { useEffect } from 'react';
+import AuthRedirect from './AuthRedirect';
 
 
 function App() {
+  // const usenavigate = useNavigate();
+  // useEffect(()=>{
+  //   let username =sessionStorage.getItem('username');
+  //   if(username===''|| username === null){
+  //     usenavigate('/login');
+  //   }
+  // }, []);
   return (
     <div className="App">
       <BrowserRouter>
-
+        <AuthRedirect/>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
