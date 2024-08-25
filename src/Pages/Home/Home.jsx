@@ -7,9 +7,11 @@ import Profile from '../../Components/Profile/Profile'
 import Cart from '../../Components/Cart/Cart'
 import CategoryList from '../../Components/CategoryList/CategoryList'; 
 function Home() {
+  const userName = sessionStorage.getItem('userName');
   return (
     <div>
       Home
+      {userName && <p>Welcome, {userName}!</p>}
       <CategoryList/>
       <Card/>
       <Wishlist/>

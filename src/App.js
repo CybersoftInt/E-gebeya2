@@ -17,70 +17,33 @@ import Error from './Components/Error/Error';
 import Shop from './Pages/Shop/Shop';
 import { useEffect } from 'react';
 import AuthRedirect from './AuthRedirect';
-
+import ProtectedRoute from './ProtectedRoute';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
-  // const usenavigate = useNavigate();
-  // useEffect(()=>{
-  //   let username =sessionStorage.getItem('username');
-  //   if(username===''|| username === null){
-  //     usenavigate('/login');
-  //   }
-  // }, []);
   return (
     <div className="App">
       <BrowserRouter>
-        <AuthRedirect/>
+        {/* <AuthRedirect/> */}
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/about' element={<About />} />
+          
           <Route path='/wishlist' element={<Wishlist />} />
           <Route path='/profile' element={<Profile />} />
           <Route path='/login' element={<Login />} />
           <Route path='/create' element={<CreateAccount />} />
-          <Route path='/billing' element={<Billing />} />
+          <Route path='/billing' element={<ProtectedRoute><Billing /></ProtectedRoute>} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/item' element={<Item />} />
           <Route path='/shop' element={<Shop />} />
 
-          {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
-=======
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Item />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/wishlist' element={<Wishlist />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/create' element={<CreateAccount />} />
-          <Route path='/billing' element={<Billing />} />
-          {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
->>>>>>> 5ea5dc78009bce09944cb02570ad4ddab142ece3
-=======
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/wishlist' element={<Wishlist />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/create' element={<CreateAccount />} />
-          <Route path='/billing' element={<Billing />} />
-          {/* <Route path='/home' element={<ShopCatagory catagory="mens"/>}/>
->>>>>>> 1315f997aa5455e238cb0a8d3a9630b3e27efdee
-        <Route path='/womens' element={<ShopCatagory catagory="womens"/>}/>
-        <Route path='/kids' element={<ShopCatagory catagory="kids"/>}/>
-        <Route path='/product' element={<Product/>}>
-          <Route path=':productId' element={<Product/>}/>
-        </Route>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/login' element={<LoginSignup/>}/> */}
+          
         </Routes>
         <Footer />
+        <ToastContainer /> 
       </BrowserRouter>
 
     </div>

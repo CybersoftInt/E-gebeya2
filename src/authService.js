@@ -1,36 +1,42 @@
-// src/services/authService.js
-const API_URL = 'http://localhost:5021/api/Auth';
+import axios from 'axios';
 
-export const registerUser = async (userData) => {
+const API_URL = 'http://localhost:5021/api/Auth'; // Correct base URL for the API
+
+// Function to register a new user
+export const registerUser = async (user) => {
     try {
-        const response = await fetch(`${API_URL}/register`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
-        });
-        if (!response.ok) throw new Error('Registration failed');
-        return await response.json();
+        const data ={
+            firstName: user.name,
+            username: user.username,
+            lastName: '',  // Correct parameter
+            password: user.password
+        }
+        const url = "http://localhost:5021/api/Auth/register"
+        const response = await axios.post(url, data);
+
+        return response.data; // Return the JSON response
     } catch (error) {
-        console.error('Registration Error:', error);
-        throw error;
+        console.error('Error registering user:', error.message);
+        throw new Error(error.message); // Rethrow with error message
     }
 };
 
-export const loginUser = async (userData) => {
+// Function to log in a user
+export const loginUser = async (credentials) => {
     try {
-        const response = await fetch(`${API_URL}/login`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(userData)
-        });
-        if (!response.ok) throw new Error('Login failed');
-        return await response.json();
+        const data ={
+            username: credentials.username,
+            password: credentials.password,
+        }
+        const url = "http://localhost:5021/api/Auth/login"
+        const response = await axios.post(url, data);
+
+        sessionStorage.setItem('jwt', response.data); // Store the JWT token in session storage
+        sessionStorage.setItem('userName', data.username); // Store the user's first name
+        console.log(response.data);
+        return response.data;
     } catch (error) {
-        console.error('Login Error:', error);
-        throw error;
+        console.error('Error logging in:', error.message);
+        throw new Error(error.message); // Rethrow with error message
     }
 };
