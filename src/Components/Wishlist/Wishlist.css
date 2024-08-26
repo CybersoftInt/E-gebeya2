@@ -37,7 +37,11 @@
   order: 1;
   flex-grow: 0;
 }
-
+#hw{
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    text-align: left;
+}
 .wishlist-items-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

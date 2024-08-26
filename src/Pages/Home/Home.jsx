@@ -10,7 +10,6 @@ function Home() {
   const userName = sessionStorage.getItem('userName');
   return (
     <div>
-      Home
       {userName && <p>Welcome, {userName}!</p>}
       <CategoryList/>
       <Card/>

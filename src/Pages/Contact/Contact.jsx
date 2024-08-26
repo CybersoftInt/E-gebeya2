@@ -46,7 +46,6 @@ const Contact = () => {
               <div className="button-container">
                 <button type="submit">Send Message</button>
               </div>
-
             </fieldset>
           </form>
         </div>

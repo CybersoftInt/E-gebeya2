@@ -1,21 +1,41 @@
 /* src/Components/CategoryList/CategoryList.css */
 
 .category-list {
-    padding: 20px;
-  }
-  
-  .category-list h2 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-  }
-  
-  .category-list ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .category-list li {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
-  }
-  
+  padding: 20px;
+  width: 100%; /* Adjusted to full width for better responsiveness */
+  background-color: #f4f4f4; /* Light background color for better contrast */
+  border-radius: 8px; /* Rounded corners for a softer look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.category-list h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #333; /* Darker text color for better readability */
+}
+
+.category-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of items to the next line */
+  gap: 10px; /* Space between items */
+}
+
+.category-list li {
+  padding: 10px 15px; /* Padding for better spacing */
+  border: 1px solid #ddd; /* Light border for a clean look */
+  border-radius: 4px; /* Rounded corners for each item */
+  background-color: #fff; /* White background for items */
+  color: #df444d; /* Blue color for text */
+  font-weight: bold;
+  cursor: pointer; /* Pointer cursor to indicate interactivity */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.category-list li:hover {
+  background-color: #df444d; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+}
+

@@ -6,10 +6,7 @@ import Breadcrumb from 'react-bootstrap/Breadcrumb';
 function Wishlist() {
   return (
     <div className='wishlist-container'>
-      <Breadcrumb>
-      <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-      <Breadcrumb.Item active>Wishlist</Breadcrumb.Item>
-    </Breadcrumb>
+<p id='hw'><a href="#">Home</a> / <a href="#">Wishlist</a> </p>
       <div className="header">
         <h4>Wishlist (4)</h4>
         <button>Move All To Bag</button>
