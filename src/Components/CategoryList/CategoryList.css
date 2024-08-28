@@ -6,6 +6,7 @@
   background-color: #f4f4f4; /* Light background color for better contrast */
   border-radius: 8px; /* Rounded corners for a softer look */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px;
 }
 
 .category-list h2 {
@@ -17,10 +18,11 @@
 .category-list ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 10px;
   display: flex;
   flex-wrap: wrap; /* Allows wrapping of items to the next line */
   gap: 10px; /* Space between items */
+  
 }
 
 .category-list li {
@@ -31,6 +33,7 @@
   color: #df444d; /* Blue color for text */
   font-weight: bold;
   text-align: center;
+  margin: 5px;
   cursor: pointer; /* Pointer cursor to indicate interactivity */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }

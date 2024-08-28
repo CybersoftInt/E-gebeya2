@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./CategoryList.css";
+import Loading from "../Loading/Loading";
 
 function CategoryList({ onCategorySelect }) {
   const [categories, setCategories] = useState([null]);
@@ -24,7 +25,7 @@ function CategoryList({ onCategorySelect }) {
     fetchCategories();
   }, []);
 
-  if (loading) return <p>Loading categories...</p>;
+  if (loading) return  <Loading message='Loading categories... '/>;
   if (error) return <p>{error}</p>;
 
   return (

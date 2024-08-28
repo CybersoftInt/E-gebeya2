@@ -14,11 +14,6 @@ function Wishlist() {
 
       <div class="wishlist-items-container">
         <WishCard />
-        <WishCard />
-        <WishCard />
-        <WishCard />
-        <WishCard />
-        <WishCard />
       </div>
       <div className="wishlist-for-you">
         <h4>Just For You</h4>

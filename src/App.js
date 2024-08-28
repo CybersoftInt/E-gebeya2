@@ -21,6 +21,7 @@ import AuthRedirect from './utils/AuthRedirect';
 import ProtectedRoute from './utils/ProtectedRoute';
 import { ToastContainer } from 'react-toastify';
 import Dashboard from './Components/Dashboard/Dashboard';
+import SearchResults from './Components/SearchResults/SearchResults';
 
 function App() {
   return (
@@ -39,8 +40,9 @@ function App() {
           <Route path='/create' element={<CreateAccount />} />
           <Route path='/billing' element={<ProtectedRoute><Billing /></ProtectedRoute>} />
           <Route path='/cart' element={<Cart />} />
-          <Route path='/item' element={<Item />} />
+          <Route path="/item/:productId" component={Item} />
           <Route path='/shop' element={<Shop />} />
+          <Route path="/search" element={<SearchResults />} />
           <Route path='/error' element={<Error />} />
           <Route path='/admin' element={<ProtectedRoute  adminOnly="true"><Dashboard /></ProtectedRoute>} />
 

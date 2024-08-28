@@ -1,0 +1,28 @@
+/* src/pages/SearchResults/SearchResults.css */
+.search-results {
+    padding: 20px;
+  }
+  
+  .search-results h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .search-results ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .search-results li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .search-results h2 {
+    font-size: 1.5rem;
+  }
+  
+  .search-results p {
+    margin: 5px 0;
+  }
+  

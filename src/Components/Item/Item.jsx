@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import main_image from "../Assets/joystickmain.png";
-import "./Item.css";
 import side_image1 from "../Assets/PS_side01.png";
 import side_image2 from "../Assets/PS_side02.png";
 import side_image3 from "../Assets/PS_side03.png";
@@ -10,37 +10,64 @@ import minus_icon from "../Assets/icon-minus.png";
 import fast_car_icon from "../Assets/fast_car_icon.png";
 import recycle_icon from "../Assets/return-icon.png";
 import wishlist_icon from "../Assets/wishlist-icon.png";
-import { Form } from "react-router-dom";
+import "./Item.css";
+import { useParams } from "react-router-dom";
+
 function Item() {
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const { productId } = useParams(); // Assuming you use React Router and have a route like /item/:productId
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5021/api/ProductController2/${productId}`);
+        setProduct(response.data);
+      } catch (error) {
+        setError('Error fetching product details. Please try again later.');
+        console.error('Error fetching product details:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [productId]);
+
+  if (loading) return <div className="loading-container">
+  <div className="loading-spinner"></div>
+  <p>Loading product details...</p>
+</div>;
+  if (error) return <p>{error}</p>;
+
   return (
     <div className="item">
       <div className="item_dir">
         <p>
-          <a href="#">Account</a> / <a href="#">Gaming</a> / <a href="#">Havic HV G-92 Gamepad</a>
+          <a href="#">Account</a> / <a href="#">Gaming</a> / <a href="#">{product?.name}</a>
         </p>
       </div>
       <div className="item_details">
         <div className="item_images">
           <div className="side_images">
-            <img src={side_image1} alt="main image" className="side_image" />
-            <img src={side_image2} alt="main image" className="side_image" />
-            <img src={side_image3} alt="main image" className="side_image" />
-            <img src={side_image4} alt="main image" className="side_image" />
+            <img src={side_image1} alt="side view 1" className="side_image" />
+            <img src={side_image2} alt="side view 2" className="side_image" />
+            <img src={side_image3} alt="side view 3" className="side_image" />
+            <img src={side_image4} alt="side view 4" className="side_image" />
           </div>
           <div className="main_image">
             <img src={main_image} alt="main image" />
           </div>
         </div>
         <div className="item_disc">
-          <h1>HavicHV G-92 Gamepad</h1>
+          <h1>{product?.name}</h1>
           <p>
-            (150 reviews) | <span>in stock</span>{" "}
+            ({product?.stockQuantity} reviews) | <span>{product?.StockQuantity > 0 ? 'In stock' : 'Out of stock'}</span>{" "}
           </p>
-          <h2>$192.00</h2>
+          <h2>${product?.price.toFixed(2)}</h2>
           <p className="discription">
-            PlayStation 5 Controller Skin High quality vinyl with air channel
-            adhesive for easy bubble free install & mess free removal Pressure
-            sensitive.
+            {product?.description}
           </p>
           <hr />
           <div className="color-container">
@@ -50,32 +77,32 @@ function Item() {
               <input type="radio" name="color" value="color2" />
             </div>
           </div>
-          <div class="product-size">
+          <div className="product-size">
             <h3>Size:</h3>
-            <div class="size-options">
+            <div className="size-options">
               <input type="radio" id="size-s" name="size" value="s" />
-              <label for="size-s">S</label>
+              <label htmlFor="size-s">S</label>
               <input type="radio" id="size-m" name="size" value="m" />
-              <label for="size-m">M</label>
+              <label htmlFor="size-m">M</label>
               <input type="radio" id="size-l" name="size" value="l" />
-              <label for="size-l">L</label>
+              <label htmlFor="size-l">L</label>
               <input type="radio" id="size-xl" name="size" value="xl" />
-              <label for="size-xl">XL</label>
+              <label htmlFor="size-xl">XL</label>
             </div>
           </div>
           <div className="buy_ammount">
             <div className="add-minus">
               <span>
-                <img id="minus" src={minus_icon} alt="" />
+                <img id="minus" src={minus_icon} alt="minus" />
               </span>
               <span>2</span>
               <span>
-                <img src={plus_icon} id="plus" alt="" />
+                <img src={plus_icon} id="plus" alt="plus" />
               </span>
             </div>
             <button>Buy Now</button>
             <div className="wishlist_icon">
-              <img src={wishlist_icon} alt="icon" />
+              <img src={wishlist_icon} alt="wishlist icon" />
             </div>
           </div>
           <div className="delivery">
@@ -87,7 +114,7 @@ function Item() {
               </div>
             </div>
             <div className="return">
-              <img src={recycle_icon} alt="fast car icon" />
+              <img src={recycle_icon} alt="return icon" />
               <div className="delivery_text">
                 <h1>Return Delivery</h1>
                 <p>Free 30 Days Delivery Returns. Details</p>

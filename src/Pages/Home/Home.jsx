@@ -10,6 +10,7 @@ import Dashboard from '../../Components/Dashboard/Dashboard'
 import ProductManager from '../../Components/ProductManager/ProductManager'
 import { isAdmin } from '../../utils/authService'
 import ManageProducts from '../../Components/Dashboard/ManageProducts/ManageProducts'
+import Loading from '../../Components/Loading/Loading';
 function Home() {
   const userName = sessionStorage.getItem('userName');
   const admin = isAdmin();
