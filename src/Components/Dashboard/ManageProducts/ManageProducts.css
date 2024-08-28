@@ -1,0 +1,55 @@
+.manage-products {
+    padding: 20px;
+}
+
+.manage-products h1 {
+    margin-bottom: 20px;
+}
+
+.manage-products table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.manage-products table, th, td {
+    border: 1px solid #ddd;
+}
+
+.manage-products th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+.manage-products th {
+    background-color: #f4f4f4;
+}
+
+.product-image {
+    width: 100px;
+    height: auto;
+}
+
+.manage-products button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.edit-form {
+    margin-top: 20px;
+}
+
+.edit-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.edit-form input {
+    margin-left: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.edit-form button {
+    margin-top: 10px;
+}

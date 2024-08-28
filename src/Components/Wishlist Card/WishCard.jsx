@@ -11,7 +11,7 @@ function WishCard() {
               <p>{discount}</p>
             </div>
             <div className="wishimg">
-              <img src={wishimg} alt="huge bag" />
+              <img src={wishimg} alt="wishlistIcon" />
             </div>
             <div className="delete">
               {/* <img src="" alt="delete" /> */}

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import { jwtDecode } from 'jwt-decode';
 import Footer from './Components/Footer/Footer';
 import Billing from './Components/Billing/Billing';
 import Wishlist from './Components/Wishlist/Wishlist';
@@ -16,9 +17,10 @@ import Cart from './Components/Cart/Cart';
 import Error from './Components/Error/Error';
 import Shop from './Pages/Shop/Shop';
 import { useEffect } from 'react';
-import AuthRedirect from './AuthRedirect';
-import ProtectedRoute from './ProtectedRoute';
+import AuthRedirect from './utils/AuthRedirect';
+import ProtectedRoute from './utils/ProtectedRoute';
 import { ToastContainer } from 'react-toastify';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -39,6 +41,10 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/item' element={<Item />} />
           <Route path='/shop' element={<Shop />} />
+          <Route path='/error' element={<Error />} />
+          <Route path='/admin' element={<ProtectedRoute  adminOnly="true"><Dashboard /></ProtectedRoute>} />
+
+          <Route path="*" element={<Error />} />
 
           
         </Routes>

@@ -24,12 +24,13 @@
 }
 
 .category-list li {
-  padding: 10px 15px; /* Padding for better spacing */
+  padding: 5px 15px; /* Padding for better spacing */
   border: 1px solid #ddd; /* Light border for a clean look */
   border-radius: 4px; /* Rounded corners for each item */
   background-color: #fff; /* White background for items */
   color: #df444d; /* Blue color for text */
   font-weight: bold;
+  text-align: center;
   cursor: pointer; /* Pointer cursor to indicate interactivity */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
 }

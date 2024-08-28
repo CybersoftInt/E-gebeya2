@@ -1,18 +1,21 @@
-import React from 'react'
-import "./Error.css"
+import React from 'react';
+import './Error.css';
+
 function Error() {
     return (
-        <div className='error'>
-            <div className="dir">
-                <a href="#">Home</a><a href="#">404Error</a>
+        <div className='error-container'>
+            <div className='error-content'>
+                <div className='error-navigation'>
+                    <a href="/">Home</a><span> / </span><a href="#">404 Error</a>
+                </div>
+                <div className='error-message'>
+                    <h1>404 Not Found</h1>
+                    <p>The page you visited could not be found. You may return to the home page.</p>
+                </div>
+                <button onClick={() => window.location.href = '/'}>Back to Home Page</button>
             </div>
-            <div className="text">
-            <h1>404 Not Found</h1>
-            <p>Your  visited page not found you may go home page </p>
-            </div>
-            <button>Back to home page</button>
         </div>
-    )
+    );
 }
 
-export default Error
+export default Error;

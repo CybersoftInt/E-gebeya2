@@ -1,0 +1,64 @@
+/* Manage Category Styles */
+.manage-category {
+    padding: 20px;
+    font-family: Arial, sans-serif; /* Ensure consistent font styling */
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333; /* Darker color for better readability */
+}
+
+.category-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.category-list li {
+    margin-bottom: 15px;
+}
+
+.category-list button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.category-list button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight scaling effect on hover */
+}
+
+.category-products {
+    margin-top: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allow products to wrap on smaller screens */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-list .card {
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded corners for a modern look */
+    overflow: hidden; /* Hide any overflow from the card */
+    margin: 10px;
+    width: calc(33.333% - 20px); /* 3 cards per row with spacing */
+    background-color: #fff; /* White background for the cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+}
+
+.product-list .card:hover {
+    transform: scale(1.03); /* Slight scaling effect on hover */
+}

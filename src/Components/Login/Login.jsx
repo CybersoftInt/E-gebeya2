@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../../Components/Login/Login.css";
 import SideImage from "../Assets/Login_Side Image.png";
-import { loginUser } from '../../authService'; // Import the login function
+import { loginUser } from '../../utils/authService'; // Import the login function
 import { Link, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify'; // Import toast functions
 import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
@@ -18,6 +18,7 @@ function Login() {
             const token = await loginUser({ username: email, password });
             sessionStorage.setItem('jwt', token); // Store JWT token in session storage
             sessionStorage.setItem('username', email);
+            // sessionStorage.setItem('userID', email);
             toast.success(token);
             toast.success('Login successful!');
             navigate('/profile'); // Redirect to home page or desired page after login

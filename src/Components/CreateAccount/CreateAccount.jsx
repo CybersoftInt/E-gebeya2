@@ -3,7 +3,7 @@ import "./CreateAccount.css";
 import SideImage from "../Assets/Login_Side Image.png";
 import google_icon from '../Assets/google.png';
 import { Link, useNavigate } from 'react-router-dom';
-import { registerUser } from '../../authService'; // Import the registerUser function
+import { registerUser } from '../../utils/authService'; // Import the registerUser function
 import { toast, ToastContainer } from 'react-toastify'; // Import toast functions
 import 'react-toastify/dist/ReactToastify.css'; // Import toast styles
 

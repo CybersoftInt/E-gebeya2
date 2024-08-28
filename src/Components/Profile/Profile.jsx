@@ -2,31 +2,40 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css'; // Import the CSS for react-toastify
+import 'react-toastify/dist/ReactToastify.css';
+import { useNavigate } from 'react-router-dom';
 import '../Profile/Profile.css';
 
 function Profile() {
   const [profile, setProfile] = useState({
-    UserID: 5,
+    UserID: null,
     FirstName: '',
     LastName: '',
     Email: '',
-    Password: '',
+    Password: '',          // New Password
+    CurrentPassword: '',   // Current Password
     PhoneNumber: '',
     Role: ''
   });
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Replace with the actual user ID
-    const userId = 5; // Example user ID
-    axios.get(`http://localhost:5021/api/Person/${userId}`)
+    const username = sessionStorage.getItem('username');
+    
+    if (!username) {
+      setError('User not authenticated');
+      setLoading(false);
+      return;
+    }
+
+    axios.get(`http://localhost:5021/api/Person/email/${username}`)
       .then(response => {
         setProfile(response.data);
         setLoading(false);
-        console.log(profile);
       })
       .catch(err => {
         setError('Failed to fetch profile data');
@@ -42,14 +51,39 @@ function Profile() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const userId = profile.UserID;
-    //console.log(profile.userID);
+
+    // Prepare the payload for the PATCH request
+    const patchData = {
+      FirstName: profile.FirstName,
+      LastName: profile.LastName,
+      Email: profile.Email,
+      PhoneNumber: profile.PhoneNumber,
+      Role: profile.Role
+    };
+
+    // Include the current password for authentication
+    const authData = {
+      CurrentPassword: profile.CurrentPassword
+    };
+
+    // Only include the new password if it's provided
+    if (profile.Password) {
+      patchData.Password = profile.Password;
+    }
 
     try {
-      await axios.patch(`http://localhost:5021/api/Person/${userId}`, profile);
+      await axios.patch(`http://localhost:5021/api/Person/${userId}`, {
+        ...patchData,
+        ...authData
+      });
       toast.success('Profile updated successfully!');
     } catch (err) {
       toast.error('Failed to update profile');
     }
+  };
+
+  const handleCancel = () => {
+    navigate('/'); // Redirect to the homepage
   };
 
   if (loading) return <p>Loading...</p>;
@@ -122,6 +156,16 @@ function Profile() {
             <div className="password">
               <h4>Password Changes</h4>
               <div className="pass">
+                <label htmlFor="CurrentPassword">Current Password</label>
+                <input
+                  type="password"
+                  id="CurrentPassword"
+                  name="CurrentPassword"
+                  value={profile.CurrentPassword}
+                  onChange={handleChange}
+                />
+              </div>
+              <div className="pass">
                 <label htmlFor="Password">New Password</label>
                 <input
                   type="password"
@@ -133,7 +177,7 @@ function Profile() {
               </div>
             </div>
             <div className="buttons">
-              <button className="cancel" type="button" onClick={() => setProfile(profile)}>Cancel</button>
+              <button className="cancel" type="button" onClick={handleCancel}>Cancel</button>
               <button className="save" type="submit">Save Changes</button>
             </div>
           </form>

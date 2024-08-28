@@ -7,6 +7,7 @@ import wishlist_icon from "../Assets/wishlist-icon.png";
 import cart_icon from "../Assets/cart_icon.png";
 import accountIcon from "../Assets/accountIcon.png";
 import logout from "../Assets/logout.png"
+import { isAdmin } from "../../utils/authService";
 function Navbar() {
   const [menu, setMenu] = useState("shop");
   const navigate = useNavigate();
@@ -21,6 +22,7 @@ function Navbar() {
     navigate('/login'); 
     const token = sessionStorage.getItem('jwt');// Redirect to login page
   };
+  const admin = isAdmin();
 
   return (
     <div className="navbar">
@@ -59,6 +61,12 @@ function Navbar() {
           </Link>
           {menu === "about" ? <hr /> : <></>}
         </li>
+        {admin && (
+          <li onClick={() => navigate('/admin')}>
+            <span>Admin Panel</span>
+            {menu === "admin" && <hr />}
+          </li>
+        )}
         <li
           onClick={() => {
             setMenu(token ? "logout" : "signup"); // Toggle between logout and signup
