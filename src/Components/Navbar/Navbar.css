@@ -99,11 +99,16 @@
     .brand-logo span {
       display: none;
     }
+    
   
     .nav-search {
       width: 100%;
       margin-top: 16px;
       position: relative;
+    }
+
+    .transparent-button {
+      display: none;
     }
   
     .navbar input {
@@ -179,4 +184,16 @@
 
 .suggestions-dropdown a:hover {
   background-color: #f0f0f0;
+}
+.transparent-button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.transparent-button img {
+  display: block;
+  width: 24px; /* Adjust as needed */
+  height: 24px; /* Adjust as needed */
 }

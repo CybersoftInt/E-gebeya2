@@ -99,7 +99,8 @@
     margin-right: 10px;
 }
 
-textarea {
+
+.contact-container textarea {
     width: 95%;
     padding: 10px;
     margin-bottom: 10px;
@@ -130,7 +131,8 @@ textarea {
 }
 
 
-span {
+
+.contact-container span {
     width: 79px;
     height: 24px;
     white-space: nowrap;

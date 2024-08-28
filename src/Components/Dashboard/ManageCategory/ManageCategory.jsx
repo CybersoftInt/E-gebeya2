@@ -8,6 +8,8 @@ function ManageCategory() {
     const [loadingCategories, setLoadingCategories] = useState(true);
     const [loadingProducts, setLoadingProducts] = useState(false);
     const [error, setError] = useState(null);
+    const [newCategoryName, setNewCategoryName] = useState("");
+    const [creatingCategory, setCreatingCategory] = useState(false);
 
     useEffect(() => {
         fetchCategories();
@@ -41,9 +43,46 @@ function ManageCategory() {
         }
     };
 
+    const handleCategoryCreate = async (e) => {
+        e.preventDefault();
+        setCreatingCategory(true);
+        try {
+            const response = await fetch('http://localhost:5021/api/Category', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name: newCategoryName }),
+            });
+            if (!response.ok) throw new Error('Failed to create category');
+            const newCategory = await response.json();
+            setCategories([...categories, newCategory]); // Add new category to the list
+            setNewCategoryName(""); // Clear input field
+        } catch (error) {
+            setError(error.message);
+        } finally {
+            setCreatingCategory(false);
+        }
+    };
+
     return (
         <div className="manage-category">
             <h1>Manage Categories</h1>
+            <div className="add-category">
+                            <h2 className="section-title">Add New Category</h2>
+                            <form onSubmit={handleCategoryCreate}>
+                                <input
+                                    type="text"
+                                    placeholder="New category name"
+                                    value={newCategoryName}
+                                    onChange={(e) => setNewCategoryName(e.target.value)}
+                                    required
+                                />
+                                <button type="submit" disabled={creatingCategory}>
+                                    {creatingCategory ? 'Creating...' : 'Add Category'}
+                                </button>
+                            </form>
+                        </div>
             {loadingCategories ? (
                 <div className="loading-message">Loading categories...</div>
             ) : error ? (
@@ -61,6 +100,7 @@ function ManageCategory() {
                                 </li>
                             ))}
                         </ul>
+                        
                     </div>
                     {selectedCategoryId && (
                         <div className="product-panel">

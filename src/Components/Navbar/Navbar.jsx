@@ -17,14 +17,14 @@ function Navbar() {
   const [suggestions, setSuggestions] = useState([]); // Suggestions state
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  
+
   // Check if token is present
-  const token = sessionStorage.getItem('jwt');
-  
+  const token = sessionStorage.getItem("jwt");
+
   // Handle logout
   const handleLogout = () => {
-    sessionStorage.removeItem('jwt'); // Remove token from session storage
-    navigate('/login'); // Redirect to login page
+    sessionStorage.removeItem("jwt"); // Remove token from session storage
+    navigate("/login"); // Redirect to login page
   };
 
   const admin = isAdmin();
@@ -38,7 +38,9 @@ function Navbar() {
       setLoading(true);
       try {
         // Fetch suggestions from the API
-        const response = await axios.get(`http://localhost:5021/api/ProductController2/search?query=${query}`);
+        const response = await axios.get(
+          `http://localhost:5021/api/ProductController2/search?query=${query}`
+        );
         setSuggestions(response.data);
       } catch (err) {
         console.error("Error fetching search suggestions", err);
@@ -86,15 +88,17 @@ function Navbar() {
           {menu === "about" ? <hr /> : <></>}
         </li>
         {admin && (
-          <li onClick={() => navigate('/admin')}>
+          <li onClick={() => navigate("/admin")}>
             <span>Admin Panel</span>
             {menu === "admin" ? <hr /> : <></>}
           </li>
         )}
-        <li onClick={() => {
-          setMenu(token ? "logout" : "signup");
-          if (token) handleLogout();
-        }}>
+        <li
+          onClick={() => {
+            setMenu(token ? "logout" : "signup");
+            if (token) handleLogout();
+          }}
+        >
           {/* Optionally add text or a link here for logout/signup */}
         </li>
       </ul>
@@ -106,18 +110,22 @@ function Navbar() {
             value={searchQuery}
             onChange={handleSearchChange}
           />
-          <button type="submit">
+          <button type="submit" className="transparent-button">
             <img src={search_icon} className="search-icon" alt="search" />
           </button>
+
           {suggestions.length > 0 && (
             <div className="suggestions-dropdown">
               {loading ? (
                 <p>Loading...</p>
               ) : (
                 <ul>
-                  {suggestions.map(suggestion => (
+                  {suggestions.map((suggestion) => (
                     <li key={suggestion.id}>
-                      <Link to={`/product/${suggestion.id}`} onClick={() => setSearchQuery('')}>
+                      <Link
+                        to={`/product/${suggestion.id}`}
+                        onClick={() => setSearchQuery("")}
+                      >
                         {suggestion.name}
                       </Link>
                     </li>
@@ -162,9 +170,7 @@ function Navbar() {
           />
         )}
         {menu === "logout" || menu === "signup" ? <hr /> : <></>}
-        {token ? (
-          <img id="logout" src={logout} onClick={handleLogout} />
-        ) : ""}
+        {token ? <img id="logout" src={logout} onClick={handleLogout} /> : ""}
         {menu === "logout" || menu === "signup" ? <hr /> : <></>}
       </div>
     </div>

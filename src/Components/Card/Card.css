@@ -1,4 +1,4 @@
-.cards{
+.cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
@@ -6,62 +6,46 @@
 }
 
 .card {
-  /* Cart With Flat Discount  */
-
-  /* Auto layout */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  padding: 0px;
+  padding: 0;
   margin: 10px;
   gap: 16px;
-
   width: 270px;
   height: 350px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  position: relative; /* Needed for absolute positioning of icons */
 }
+
 .card-top {
   width: 270px;
   height: 250px;
   background: #f5f5f5;
   border-radius: 4px;
-  flex: none;
-  order: 0;
-  flex-grow: 0;
+  position: relative; /* Needed for positioning discount badge */
 }
 
 .card-price {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 0px;
+  padding: 0;
   gap: 12px;
   margin-top: 20px;
-
   width: 85px;
   height: 24px;
-
-  /* Inside auto layout */
-  flex: none;
-  order: 1;
-  flex-grow: 0;
 }
 
 .card-icons {
-  padding: 0px;
-  width: max-content;
+  position: absolute;
+  top: 10px; /* Adjust this value to move icons up or down */
+  right: 10px; /* Adjust this value to move icons left or right */
   display: flex;
   flex-direction: column;
+  gap: 10px; /* Space between the icons */
 }
+
 .card-icons img {
-  position: relative;
-  margin-left: 220px;
-  top: 0px;
-  right: 0;
   width: 34px;
   height: 34px;
   cursor: pointer;
@@ -75,84 +59,76 @@
   text-align: center;
   padding: 4px 12px;
   gap: 10px;
-
-  position: relative;
-  width: 30px;
-  height: 26px;
-  left: 12px;
-  top: 12px;
+  position: absolute;
+  top: 10px; /* Adjust this value to move the discount badge up or down */
+  left: 10px; /* Adjust this value to move the discount badge left or right */
   background: #f15555;
   border-radius: 4px;
+  color: #fff;
 }
+
 .card-bottom {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 8px;
-    width: 201px;
-    height: 84px;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-  }
-  .card-bottom h3 {
-    /* HAVIT HV-G92 Gamepad */
-  
-    width: 201px;
-    height: 24px;
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 24px;
-    color: #000000;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-  }
-  .card-bottom span:first-child{
-    color: #f15555;
-  }
-  .card-bottom span:nth-child(2){
-    color: grey;
-    text-decoration: line-through;
-  }
-/* src/Components/NoProductsMessage/NoProductsMessage.css */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 8px;
+  margin-top: 10px;
+  width: 201px;
+  height: 84px;
+}
+
+.card-bottom h3 {
+  width: 201px;
+  height: 24px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.card-bottom span:first-child {
+  color: #f15555;
+  margin-top: 10px;
+}
+
+.card-bottom span:nth-child(2) {
+  color: grey;
+  text-decoration: line-through;
+  margin-top: 10px;
+}
+
 .no-products-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; 
-
-  width: 100vw;/* Full viewport height */
-  background-color: #f9f9f9; /* Light background color */
+  height: 100vh;
+  width: 100vw;
+  background-color: #f9f9f9;
   text-align: center;
 }
 
 .no-products-icon {
-  font-size: 5rem; /* Large emoji or icon */
-  color: #e74c3c; /* Red color */
+  font-size: 5rem;
+  color: #e74c3c;
   margin-bottom: 1rem;
+  animation: bounce 2s infinite;
 }
 
 .no-products-text {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #333; /* Darker text color */
+  color: #333;
   margin-bottom: 0.5rem;
 }
 
 .no-products-subtext {
   font-size: 1rem;
-  color: #777; /* Lighter text color */
+  color: #777;
   margin-top: 0;
-}
-
-/* Add animation to the icon */
-.no-products-icon {
-  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
