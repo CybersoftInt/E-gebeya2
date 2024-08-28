@@ -1,55 +1,127 @@
+/* ManageProducts.css */
+
 .manage-products {
     padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: small;
 }
 
-.manage-products h1 {
+h1 {
+    font-size: 24px;
+    color: #DB4444;
     margin-bottom: 20px;
 }
 
-.manage-products table {
+.products-table {
     width: 100%;
     border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.manage-products table, th, td {
-    border: 1px solid #ddd;
-}
-
-.manage-products th, td {
-    padding: 8px;
+.products-table th, .products-table td {
+    padding: 12px 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
-.manage-products th {
+.products-table th {
     background-color: #f4f4f4;
+    color: #555;
+    font-weight: 600;
+}
+
+.products-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.products-table tr:hover {
+    background-color: #f1f1f1;
 }
 
 .product-image {
-    width: 100px;
+    max-width: 100px;
     height: auto;
-}
-
-.manage-products button {
-    margin: 0 5px;
-    padding: 5px 10px;
-    cursor: pointer;
+    border-radius: 4px;
 }
 
 .edit-form {
     margin-top: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form h2 {
+    font-size: 20px;
+    color: #DB4444;
+    margin-bottom: 20px;
 }
 
 .edit-form label {
     display: block;
     margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
 }
 
 .edit-form input {
-    margin-left: 10px;
-    padding: 5px;
     width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f0f0f0;
 }
 
-.edit-form button {
-    margin-top: 10px;
+.form-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.save-btn, .cancel-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background: #DB4444;
+    color: #fff;
+}
+
+.cancel-btn {
+    background: #f0f0f0;
+    color: #555;
+}
+
+.edit-btn, .delete-btn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.delete-btn {
+    background: #f44336;
+    color: #fff;
+    margin-left: 5px;
 }

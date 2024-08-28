@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ManageProducts from './ManageProducts/ManageProducts';
 import ManageCategory from './ManageCategory/ManageCategory';
+import './Dashboard.css'; // Import the CSS file for styling
 
 export default function Dashboard() {
     const [people, setPeople] = useState([]);
@@ -26,38 +27,42 @@ export default function Dashboard() {
         fetchPeople();
     }, []);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>Error: {error}</div>;
+    if (loading) return <div className="loading">Loading...</div>;
+    if (error) return <div className="error">Error: {error}</div>;
 
     return (
-        <div>
+        <div className="dashboard">
             <h1>Admin Dashboard</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>User ID</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Email</th>
-                        <th>Phone Number</th>
-                        <th>Role</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {people.map(person => (
-                        <tr key={person.userID}>
-                            <td>{person.userID}</td>
-                            <td>{person.firstName}</td>
-                            <td>{person.lastName}</td>
-                            <td>{person.email}</td>
-                            <td>{person.phoneNumber}</td>
-                            <td>{person.role}</td>
+            <div className="table-container">
+                <table className="people-table">
+                    <thead>
+                        <tr>
+                            <th>User ID</th>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Email</th>
+                            <th>Phone Number</th>
+                            <th>Role</th>
                         </tr>
-                    ))}
-                </tbody>
-            </table>
-            <ManageProducts/>
-            <ManageCategory/>
+                    </thead>
+                    <tbody>
+                        {people.map(person => (
+                            <tr key={person.userID}>
+                                <td>{person.userID}</td>
+                                <td>{person.firstName}</td>
+                                <td>{person.lastName}</td>
+                                <td>{person.email}</td>
+                                <td>{person.phoneNumber}</td>
+                                <td>{person.role}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+            </div>
+            <div className="management-sections">
+                <ManageProducts />
+                <ManageCategory />
+            </div>
         </div>
     );
 }

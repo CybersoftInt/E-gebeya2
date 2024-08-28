@@ -1,0 +1,59 @@
+/* Dashboard.css */
+
+.dashboard {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 24px;
+    color: #DB4444;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    margin-bottom: 20px;
+}
+
+.people-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.people-table th, .people-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.people-table th {
+    background-color: #f4f4f4;
+    color: #555;
+    font-weight: 600;
+}
+
+.people-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.people-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.loading, .error {
+    font-size: 18px;
+    color: #DB4444;
+    margin: 20px 0;
+}
+
+.management-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

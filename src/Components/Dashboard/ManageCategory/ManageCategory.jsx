@@ -45,35 +45,39 @@ function ManageCategory() {
         <div className="manage-category">
             <h1>Manage Categories</h1>
             {loadingCategories ? (
-                <div>Loading categories...</div>
+                <div className="loading-message">Loading categories...</div>
             ) : error ? (
-                <div>Error: {error}</div>
+                <div className="error-message">Error: {error}</div>
             ) : (
-                <div>
-                    <h2>Categories</h2>
-                    <ul className="category-list">
-                        {categories.map(category => (
-                            <li key={category.categoryID}>
-                                <button onClick={() => handleCategorySelect(category.categoryID)}>
-                                    {category.name}
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
+                <div className="container">
+                    <div className="category-panel">
+                        <h2 className="section-title">Categories</h2>
+                        <ul className="category-list">
+                            {categories.map(category => (
+                                <li key={category.categoryID} className="category-item">
+                                    <button className="category-button" onClick={() => handleCategorySelect(category.categoryID)}>
+                                        {category.name}
+                                    </button>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                     {selectedCategoryId && (
-                        <div className="category-products">
-                            <h2>Products in Selected Category</h2>
+                        <div className="product-panel">
+                            <h2 className="section-title">Products in Selected Category</h2>
                             {loadingProducts ? (
-                                <div>Loading products...</div>
+                                <div className="loading-message">Loading products...</div>
                             ) : (
                                 <ul className="product-list">
                                     {categoryProducts.map(product => (
-                                        <li key={product.productID}>
+                                        <li key={product.productID} className="product-item">
                                             <img src={product.imageURL} alt={product.name} className="product-image" />
-                                            <div>{product.name}</div>
-                                            <div>{product.description}</div>
-                                            <div>Price: ${product.price}</div>
-                                            <div>Stock: {product.stockQuantity}</div>
+                                            <div className="product-info">
+                                                <div className="product-name">{product.name}</div>
+                                                <div className="product-description">{product.description}</div>
+                                                <div className="product-price">Price: ${product.price}</div>
+                                                <div className="product-stock">Stock: {product.stockQuantity}</div>
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>

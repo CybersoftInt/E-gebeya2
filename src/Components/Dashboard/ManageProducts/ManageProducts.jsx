@@ -67,7 +67,7 @@ function ManageProducts() {
     return (
         <div className="manage-products">
             <h1>Manage Products</h1>
-            <table>
+            <table className="products-table">
                 <thead>
                     <tr>
                         <th>Product ID</th>
@@ -89,7 +89,7 @@ function ManageProducts() {
                             <td>{product.productID}</td>
                             <td>{product.name}</td>
                             <td>{product.description}</td>
-                            <td>{product.price}</td>
+                            <td>${product.price.toFixed(2)}</td>
                             <td>{product.categoryID}</td>
                             <td>{product.color}</td>
                             <td>{product.size}</td>
@@ -97,8 +97,8 @@ function ManageProducts() {
                             <td><img src={product.imageURL} alt={product.name} className="product-image" /></td>
                             <td>{product.brand}</td>
                             <td>
-                                <button onClick={() => handleEdit(product)}>Edit</button>
-                                <button onClick={() => handleDelete(product.productID)}>Delete</button>
+                                <button className="edit-btn" onClick={() => handleEdit(product)}>Edit</button>
+                                <button className="delete-btn" onClick={() => handleDelete(product.productID)}>Delete</button>
                             </td>
                         </tr>
                     ))}
@@ -108,89 +108,23 @@ function ManageProducts() {
             {isEditing && (
                 <div className="edit-form">
                     <h2>Edit Product</h2>
-                    <label>
-                        Name:
-                        <input
-                            type="text"
-                            name="name"
-                            value={editingProduct.name}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Description:
-                        <input
-                            type="text"
-                            name="description"
-                            value={editingProduct.description}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Price:
-                        <input
-                            type="number"
-                            name="price"
-                            value={editingProduct.price}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Category ID:
-                        <input
-                            type="number"
-                            name="categoryID"
-                            value={editingProduct.categoryID}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Color:
-                        <input
-                            type="text"
-                            name="color"
-                            value={editingProduct.color}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Size:
-                        <input
-                            type="text"
-                            name="size"
-                            value={editingProduct.size}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Stock Quantity:
-                        <input
-                            type="number"
-                            name="stockQuantity"
-                            value={editingProduct.stockQuantity}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Image URL:
-                        <input
-                            type="text"
-                            name="imageURL"
-                            value={editingProduct.imageURL}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <label>
-                        Brand:
-                        <input
-                            type="text"
-                            name="brand"
-                            value={editingProduct.brand}
-                            onChange={handleChange}
-                        />
-                    </label>
-                    <button onClick={handleSave}>Save</button>
-                    <button onClick={() => setIsEditing(false)}>Cancel</button>
+                    {Object.keys(editingProduct).map(key => (
+                        key !== 'productID' && (
+                            <label key={key}>
+                                {key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1')}:
+                                <input
+                                    type={typeof editingProduct[key] === 'number' ? 'number' : 'text'}
+                                    name={key}
+                                    value={editingProduct[key]}
+                                    onChange={handleChange}
+                                />
+                            </label>
+                        )
+                    ))}
+                    <div className="form-buttons">
+                        <button className="save-btn" onClick={handleSave}>Save</button>
+                        <button className="cancel-btn" onClick={() => setIsEditing(false)}>Cancel</button>
+                    </div>
                 </div>
             )}
         </div>

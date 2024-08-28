@@ -64,7 +64,7 @@ function Navbar() {
         {admin && (
           <li onClick={() => navigate('/admin')}>
             <span>Admin Panel</span>
-            {menu === "admin" && <hr />}
+            {menu === "admin"  ? <hr /> : <></>}
           </li>
         )}
         <li
