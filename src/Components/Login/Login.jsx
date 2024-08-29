@@ -21,7 +21,7 @@ function Login() {
             // sessionStorage.setItem('userID', email);
             toast.success(token);
             toast.success('Login successful!');
-            navigate('/profile'); // Redirect to home page or desired page after login
+            navigate('/'); // Redirect to home page or desired page after login
         } catch (error) {
             setError('Login failed. Please check your credentials.');
             toast.error('Login failed. Please check your credentials.');

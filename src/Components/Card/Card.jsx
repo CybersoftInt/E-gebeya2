@@ -6,6 +6,7 @@ import defaultCardImage from "../Assets/redjoystick.png"; // Default image if no
 import wishIcon from "../Assets/wishlist-icon.png";
 import cartIcon from "../Assets/cart_icon.png"
 import { Link } from "react-router-dom";
+import Loading from "../Loading/Loading"
 function Card({ categoryId }) {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -30,7 +31,7 @@ function Card({ categoryId }) {
     fetchProducts();
   }, [categoryId]);
 
-  if (loading) return <p>Loading products...</p>;
+  if (loading) return <Loading message="Loading products.."/>;
   if (error) return <p>{error}</p>;
   const handleAddToWishlist = (productId) => {
     // Add logic to handle adding to wishlist
@@ -41,7 +42,7 @@ function Card({ categoryId }) {
     // Add logic to handle adding to cart
     console.log(`Added product ${productId} to cart`);
   };
-  if (loading) return <p>Loading products...</p>;
+  if (loading) return <Loading />;
   if (error) return <p>{error}</p>;
 
   return (

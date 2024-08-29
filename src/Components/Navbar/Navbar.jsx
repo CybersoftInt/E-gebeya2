@@ -10,7 +10,7 @@ import cart_icon from "../Assets/cart_icon.png";
 import accountIcon from "../Assets/accountIcon.png";
 import logout from "../Assets/logout.png";
 import { isAdmin } from "../../utils/authService";
-
+import adminIcon from "../../Components/Assets/administration.png"
 function Navbar() {
   const [menu, setMenu] = useState("shop");
   const [searchQuery, setSearchQuery] = useState(""); // Search query state
@@ -87,9 +87,9 @@ function Navbar() {
           </Link>
           {menu === "about" ? <hr /> : <></>}
         </li>
-        {admin && (
+        <div className="adminICon"></div>{admin && (
           <li onClick={() => navigate("/admin")}>
-            <span>Admin Panel</span>
+            <span>admin</span>
             {menu === "admin" ? <hr /> : <></>}
           </li>
         )}
