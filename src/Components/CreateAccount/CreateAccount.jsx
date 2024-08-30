@@ -21,7 +21,7 @@ function CreateAccount() {
         try {
             await registerUser({ username: email, password, name, lname });
             toast.success('Account created successfully!');
-            navigate('/profile');
+            navigate('/login');
         } catch (error) {
             setError('Account creation failed. Please try again.');
             console.log(error);
@@ -31,27 +31,36 @@ function CreateAccount() {
 
     const handleGoogleSuccess = async (response) => {
         try {
-            // Send the response token to your backend for verification and user registration
-            const res = await fetch('/api/auth/google', {
+            console.log('Google Sign-In Response:', response);
+            const res = await fetch('https://localhost:5020/api/Auth/google', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ id_token: response.credential }),
+                body: JSON.stringify({ IdToken: response.credential }),
             });
+
+            const contentType = res.headers.get("content-type");
+        if (contentType && contentType.indexOf("application/json") !== -1) {
             const data = await res.json();
-            console.log(data)
+            console.log('Backend Response:', data);
             if (data.success) {
                 toast.success('Google Sign-In successful!');
-                navigate('/profile');
+                navigate('/');
             } else {
-                toast.error('Google Sign-In failed.');
+                toast.error(data.message || 'Google Sign-In failed.');
             }
+        } else {
+            const text = await res.text();
+            console.log('Backend Response Er:', text);
+            toast.error('Unexpected response from server.');
+        }
         } catch (error) {
+            console.error('Error in Google Sign-In:', error);
             toast.error('An error occurred. Please try again.');
-            console.log(error);
         }
     };
+    
 
     return (
         <div className='c-container'>
