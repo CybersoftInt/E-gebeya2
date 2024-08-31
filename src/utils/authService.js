@@ -34,6 +34,7 @@ export const loginUser = async (credentials) => {
         const url = "http://localhost:5021/api/Auth/login"
         const response = await axios.post(url, data);
 
+        const token = response.data; 
         sessionStorage.setItem('jwt', response.data); // Store the JWT token in session storage
         sessionStorage.setItem('userName', data.username); // Store the user's first name
         

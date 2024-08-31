@@ -13,23 +13,50 @@ function Card({ categoryId }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // const fetchProducts = async () => {
+    //   try {
+    //     const url = categoryId
+    //       ? `http://localhost:5021/api/Category/product/${categoryId}`
+    //       : 'http://localhost:5021/api/ProductController2';
+    //     const response = await axios.get(url);
+    //     console.log("Fetched products:", response.data);
+    //     setProducts(response.data);
+    //   } catch (error) {
+    //     setError('Error fetching products. Please try again later.');
+    //     console.error('Error fetching products:', error);
+    //   } finally {
+    //     setLoading(false);
+    //   }
+    // };
     const fetchProducts = async () => {
       try {
-        const url = categoryId
-          ? `http://localhost:5021/api/Category/product/${categoryId}`
-          : 'http://localhost:5021/api/ProductController2';
-        const response = await axios.get(url);
-        setProducts(response.data);
+          const url = categoryId
+              ? `http://localhost:5021/api/Category/product/${categoryId}`
+              : 'http://localhost:5021/api/ProductController2';
+  
+          const response = await fetch(url);
+          if (!response.ok) throw new Error('Failed to fetch products');
+          
+          const data = await response.json();
+
+          const randomProducts = getRandomProducts(data, 8);
+        setProducts(randomProducts);
+          console.log('Fetched products:', data);
       } catch (error) {
-        setError('Error fetching products. Please try again later.');
-        console.error('Error fetching products:', error);
+          setError('Error fetching products. Please try again later.');
+          console.error('Error fetching products:', error);
       } finally {
-        setLoading(false);
+          setLoading(false);
       }
-    };
+  };
+  
 
     fetchProducts();
   }, [categoryId]);
+  const getRandomProducts = (productsArray, count) => {
+    const shuffled = [...productsArray].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+  };
 
   if (loading) return <Loading message="Loading products.."/>;
   if (error) return <p>{error}</p>;
@@ -49,6 +76,7 @@ function Card({ categoryId }) {
     <div className="cards">
       {products.length > 0 ? (
         products.map((item) => (
+          
           <div className="card" key={item.productID}>
             <div className="card-top">
               <div className="discount">
@@ -63,11 +91,7 @@ function Card({ categoryId }) {
                 />
               </div>
               <Link to={`/item/${item.productID}`}>
-                <img
-                  src={defaultCardImage || item.imageUrl} // Use item.imageURL if available
-                  alt={item.name || "Product image"}
-                  className="card-image"
-                />
+                <img src={item.imageURL || defaultCardImage} alt={item.name} className="card-image" />
               </Link>
             
             <div className="card-bottom">

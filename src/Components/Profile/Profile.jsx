@@ -3,7 +3,9 @@ import axios from 'axios';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from 'react-router-dom';
-import './Profile.css'; // Adjust the import path as needed
+import './Profile.css';
+import Loading from '../Loading/Loading';
+import { loginUser } from '../../utils/authService';
 
 function Profile() {
   const [profile, setProfile] = useState({
@@ -11,8 +13,8 @@ function Profile() {
     FirstName: '',
     LastName: '',
     Email: '',
-    Password: '',          // New Password
-    CurrentPassword: '',   // Current Password
+    Password: '',
+    CurrentPassword: '',
     PhoneNumber: '',
     Role: ''
   });
@@ -21,12 +23,12 @@ function Profile() {
   const [error, setError] = useState(null);
   const [activeSection, setActiveSection] = useState('profile');
   const [newAddress, setNewAddress] = useState({ street: '', city: '', zip: '' });
-  
+
   const navigate = useNavigate();
 
   useEffect(() => {
     const username = sessionStorage.getItem('username');
-    
+
     if (!username) {
       setError('User not authenticated');
       setLoading(false);
@@ -35,7 +37,18 @@ function Profile() {
 
     axios.get(`http://localhost:5021/api/Person/email/${username}`)
       .then(response => {
-        setProfile(response.data);
+        console.log('Fetched profile data:', response.data);
+        const data = response.data;
+        setProfile({
+          UserID: data.userID|| "",
+          FirstName: data.firstName || '',
+          LastName: data.lastName || '',
+          Email: data.email || '',
+          Password: '', // Initialize empty for user input
+          CurrentPassword: '', // Initialize empty for user input
+          PhoneNumber: data.phoneNumber || '',
+          Role: data.role || ''
+        });
         setLoading(false);
       })
       .catch(err => {
@@ -53,12 +66,17 @@ function Profile() {
     e.preventDefault();
     const userId = profile.UserID;
 
+    if (userId === null) {
+      toast.error('User ID is missing');
+      return;
+    }
+
     const patchData = {
+      userId: profile.UserID,
       FirstName: profile.FirstName,
       LastName: profile.LastName,
       Email: profile.Email,
-      PhoneNumber: profile.PhoneNumber,
-      Role: profile.Role
+      PhoneNumber: profile.PhoneNumber
     };
 
     const authData = {
@@ -68,12 +86,17 @@ function Profile() {
     if (profile.Password) {
       patchData.Password = profile.Password;
     }
+    console.log('Submitting profile data:', { ...patchData, ...authData });
 
     try {
       await axios.patch(`http://localhost:5021/api/Person/${userId}`, {
         ...patchData,
         ...authData
       });
+
+      if (profile.Password) {
+        await loginUser({ username: profile.Email, password: profile.Password });
+    }
       toast.success('Profile updated successfully!');
     } catch (err) {
       toast.error('Failed to update profile');
@@ -96,12 +119,12 @@ function Profile() {
     toast.success('Address added successfully!');
   };
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <Loading/>;
   if (error) return <p>{error}</p>;
 
   return (
     <div className="page">
-      <ToastContainer /> {/* Include ToastContainer to render the toasts */}
+      <ToastContainer />
       <p><a href="/">Home</a> / <a href="#">Profile</a></p>
       <div className="p-container">
         <div className="profile-container">
