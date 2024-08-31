@@ -8,6 +8,7 @@ import { fetchUserIdByEmail, fetchWishlistsByUserId, fetchWishlistItemsById, fet
 function Wishlist() {
   const [userWishlists, setUserWishlists] = useState([]);
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -24,35 +25,45 @@ function Wishlist() {
         // Fetch items and their products for each wishlist
         const wishlistsWithItems = await Promise.all(
           userWishlistsData.map(async (wishlist) => {
-            const items = await fetchWishlistItemsById(wishlist.wishlistID);
+            try {
+              const items = await fetchWishlistItemsById(wishlist.wishlistID);
 
-            // Fetch product data for each item
-            const itemsWithProducts = await Promise.all(
-              items.map(async (item) => {
-                
-                console.log(item.productID);
-                const product = await fetchProductById(item.productID);
-                return { ...item, Product: product };
-              })
-            );
-            // console.log(itemsWithProducts.map(w =>{
-            //   wishlist.items.map(item=> {item.name}) 
-            // }));
+              // Fetch product data for each item
+              const itemsWithProducts = await Promise.all(
+                items.map(async (item) => {
+                  try {
+                    const product = await fetchProductById(item.productID);
+                    return { ...item, Product: product };
+                  } catch (error) {
+                    console.error(`Error fetching product with ID ${item.productID}:`, error);
+                    return { ...item, Product: null }; // Handle missing product gracefully
+                  }
+                })
+              );
 
-            return { ...wishlist, items: itemsWithProducts };
+              return { ...wishlist, items: itemsWithProducts };
+            } catch (error) {
+              console.error(`Error fetching items for wishlist ID ${wishlist.wishlistID}:`, error);
+              return { ...wishlist, items: [] }; // Handle missing items gracefully
+            }
           })
         );
-        console.log('Wishlists with items and products:', wishlistsWithItems);
+
         setUserWishlists(wishlistsWithItems);
       } catch (error) {
+        console.error('Error fetching data:', error);
         setError(error.message);
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  // if (error) return <div>Error: {error}</div>;
+  if (loading) return <div>Loading wishlists...</div>;
+
+  if (error) return <div className="error-message">An error occurred: {error}</div>;
 
   return (
     <div className='wishlist-container'>
@@ -73,7 +84,7 @@ function Wishlist() {
                 wishlist.items.map(item => {
                   console.log('Rendering WishCard with item:', item); // Log the item being passed to WishCard
                   return <WishCard key={item.wishlistItemID} item={item} />;
-})
+                })
               ) : (
                 <p>No items in this wishlist</p>
               )}
