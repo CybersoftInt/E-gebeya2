@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './ManageCategory.css'; // Import CSS for styling
 
+import { toast, ToastContainer } from 'react-toastify';
+
 function ManageCategory() {
     const [categories, setCategories] = useState([]);
     const [selectedCategoryId, setSelectedCategoryId] = useState(null);
@@ -57,7 +59,8 @@ function ManageCategory() {
             if (!response.ok) throw new Error('Failed to create category');
             const newCategory = await response.json();
             setCategories([...categories, newCategory]); // Add new category to the list
-            setNewCategoryName(""); // Clear input field
+            setNewCategoryName("");
+            toast.success('Category created successfully!'); // Clear input field
         } catch (error) {
             setError(error.message);
         } finally {

@@ -42,6 +42,7 @@ const Contact = () => {
           message: ''
         });
       } else {
+        console.log(response);
         const errorText = await response.text();
         setStatus(`Failed to send message: ${errorText}`);
       }
@@ -74,8 +75,8 @@ const Contact = () => {
               <span>Write To Us</span>
             </div>
             <p>Fill out our form and we will contact you within 24 hours.</p>
-            <p>Email: customer@exclusive.com</p>
-            <p>Email: support@exclusive.com</p>
+            <p>Email: customer@Egebeya.com</p>
+            <p>Email: support@Egebeya.com</p>
           </div>
         </div>
         <div className="right">

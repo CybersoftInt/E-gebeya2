@@ -3,6 +3,7 @@ import {jwtDecode} from 'jwt-decode';
 
 const API_URL = 'http://localhost:5021/api/Auth'; // Correct base URL for the API
 export const getToken = () => sessionStorage.getItem('jwt');
+export const getUserName = () => sessionStorage.getItem('userName');
 export const setToken = (token) => sessionStorage.setItem('jwt', token);
 export const removeToken = () => sessionStorage.removeItem('jwt');
 // Function to register a new user

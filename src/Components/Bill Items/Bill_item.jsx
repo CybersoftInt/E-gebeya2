@@ -12,6 +12,7 @@ function Bill_item() {
     <div className="price"><h3>$650</h3>
     </div>
     </div></div>
+    
   )
 }
 

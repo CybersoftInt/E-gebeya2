@@ -34,7 +34,9 @@ function Item() {
 
     fetchProduct();
   }, [productId]);
+  const buyproduct = async()=>{
 
+  }
   if (loading) return <div className="loading-container">
   <div className="loading-spinner"></div>
   <p>Loading product details...</p>
@@ -57,13 +59,13 @@ function Item() {
             <img src={side_image4} alt="side view 4" className="side_image" />
           </div>
           <div className="main_image">
-            <img src={main_image} alt="main image" />
+            <img src={product?.imageURL} alt="main image" />
           </div>
         </div>
         <div className="item_disc">
           <h1>{product?.name}</h1>
           <p>
-            ({product?.stockQuantity} reviews) | <span>{product?.StockQuantity > 0 ? 'In stock' : 'Out of stock'}</span>{" "}
+            ({product?.stockQuantity} reviews) | <span>{product?.stockQuantity > 0 ? <span style={{color: 'green',fontWeight: 'bold'}}>In stock</span> : <span style={{color: 'red',fontWeight: 'bold'}}>Out of stock</span>}</span>
           </p>
           <h2>${product?.price.toFixed(2)}</h2>
           <p className="discription">
@@ -100,7 +102,7 @@ function Item() {
                 <img src={plus_icon} id="plus" alt="plus" />
               </span>
             </div>
-            <button>Buy Now</button>
+            <button onclick={buyproduct()}>Buy Now</button>
             <div className="wishlist_icon">
               <img src={wishlist_icon} alt="wishlist icon" />
             </div>

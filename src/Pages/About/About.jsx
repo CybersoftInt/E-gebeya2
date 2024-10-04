@@ -35,13 +35,13 @@ function About() {
     // Persona Array
     const personas = [
         {
-            name: "Emma Watson",
-            role: "Customer Support Specialist",
+            name: "Yabets Workaferahu",
+            role: "Developer",
             img: EmmaWatson,
         },
         {
-            name: "Tom Cruise",
-            role: "Personalized Support Specialist",
+            name: "Henok Abebaw",
+            role: "Developer",
             img: TomCruise,
         }
     ];
@@ -96,9 +96,9 @@ function About() {
             <div className="persona">
                 {personas.map((persona, index) => (
                     <div className="indiv" key={index}>
-                        <div className="indiv-img">
+                        {/* <div className="indiv-img">
                             <img src={persona.img} alt={persona.name} />
-                        </div>
+                        </div> */}
                         <div className="indiv-desc">
                             <div className="name">
                                 <h3>{persona.name}</h3>

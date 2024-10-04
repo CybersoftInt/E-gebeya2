@@ -8,7 +8,6 @@ import { fetchUserIdByEmail, fetchWishlistsByUserId, fetchWishlistItemsById, fet
 function Wishlist() {
   const [userWishlists, setUserWishlists] = useState([]);
   const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -16,54 +15,43 @@ function Wishlist() {
         const email = sessionStorage.getItem('userName');
         if (!email) throw new Error('User email not found in sessionStorage');
 
-        // Fetch user ID from email
         const userId = await fetchUserIdByEmail(email);
-
-        // Fetch user wishlists
         const userWishlistsData = await fetchWishlistsByUserId(userId);
+        console.log("userWishlistsData "+ userWishlistsData)
 
-        // Fetch items and their products for each wishlist
         const wishlistsWithItems = await Promise.all(
           userWishlistsData.map(async (wishlist) => {
-            try {
-              const items = await fetchWishlistItemsById(wishlist.wishlistID);
+            const items = await fetchWishlistItemsById(wishlist.wishlistID);
+            const itemsWithProducts = await Promise.all(
+              items.map(async (item) => {
+                const product = await fetchProductById(item.productID);
+                return { ...item, Product: product };
+              })
+            );
 
-              // Fetch product data for each item
-              const itemsWithProducts = await Promise.all(
-                items.map(async (item) => {
-                  try {
-                    const product = await fetchProductById(item.productID);
-                    return { ...item, Product: product };
-                  } catch (error) {
-                    console.error(`Error fetching product with ID ${item.productID}:`, error);
-                    return { ...item, Product: null }; // Handle missing product gracefully
-                  }
-                })
-              );
-
-              return { ...wishlist, items: itemsWithProducts };
-            } catch (error) {
-              console.error(`Error fetching items for wishlist ID ${wishlist.wishlistID}:`, error);
-              return { ...wishlist, items: [] }; // Handle missing items gracefully
-            }
+            return { ...wishlist, items: itemsWithProducts };
           })
         );
 
         setUserWishlists(wishlistsWithItems);
       } catch (error) {
-        console.error('Error fetching data:', error);
         setError(error.message);
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchData();
   }, []);
 
-  if (loading) return <div>Loading wishlists...</div>;
+  const handleDeleteItem = (wishlistItemID) => {
+    setUserWishlists(prevWishlists =>
+      prevWishlists.map(wishlist => ({
+        ...wishlist,
+        items: wishlist.items.filter(item => item.wishlistItemID !== wishlistItemID),
+      }))
+    );
+  };
 
-  if (error) return <div className="error-message">An error occurred: {error}</div>;
+  //if (error) return <div>Error: {error}</div>;
 
   return (
     <div className='wishlist-container'>
@@ -72,18 +60,19 @@ function Wishlist() {
       </p>
       <div className="header">
         <h4>Wishlist ({userWishlists.length})</h4>
+        {console.log(userWishlists.length)}
         <button>Move All To Bag</button>
       </div>
 
       <div className="wishlist-items-container">
         {userWishlists.map(wishlist => (
           <div key={wishlist.wishlistID} className="wishlist-section">
-            <h4>{wishlist.name}</h4>
+            <h4>{wishlist.name}({wishlist.items.length})</h4>
             <div>
               {wishlist.items.length > 0 ? (
                 wishlist.items.map(item => {
-                  console.log('Rendering WishCard with item:', item); // Log the item being passed to WishCard
-                  return <WishCard key={item.wishlistItemID} item={item} />;
+                  console.log('Rendering WishCard with item:', item); 
+                  return <WishCard key={item.wishlistItemID} item={item} onDelete={handleDeleteItem} />;
                 })
               ) : (
                 <p>No items in this wishlist</p>
@@ -97,7 +86,6 @@ function Wishlist() {
         <h4>Just For You</h4>
         <button>See All</button>
       </div>
-
       <div className="just-for-you">
         <Card categoryId={null} />
       </div>

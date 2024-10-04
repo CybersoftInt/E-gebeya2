@@ -1,3 +1,5 @@
+import { getUserName } from "./authService";
+
 // src/services/apiService.js
 const API_URL = 'http://localhost:5021/api/';
 
@@ -36,11 +38,16 @@ export const fetchWishlistsByUserId = async (userId) => {
 export const fetchUserIdByEmail = async (email) => {
   const response = await fetch(`http://localhost:5021/api/Person/email/${encodeURIComponent(email)}`);
   if (!response.ok) {
-    throw new Error('Failed to fetch user ID');
+    console.log("user not regitered");
   }
   const data = await response.json();
-  return data.userID; // Adjust based on the actual response structure
+  return data.UserID; // Adjust based on the actual response structure
 };
+export const fetchuserId = async ()=>{
+  const useremail = getUserName();
+  return fetchUserIdByEmail(useremail)
+}
+
 // utils/api.js
 export const fetchAllWishlists = async () => {
   const response = await fetch('http://localhost:5021/api/Wishlist');
@@ -83,4 +90,22 @@ export const addWishlist = async (userId, wishlistName) => {
 
   const data = await response.json();
   return data;
+};
+
+// utils/apiService.js
+export const addWishlistItem = async (wishlistID, productId) => {
+  const response = await fetch(`http://localhost:5021/api/Wishlist/add`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ wishlistID, productId }),
+  });
+  console.log(response);
+
+  if (!response.ok) {
+    throw new Error(`Failed to add item to wishlist: ${response.statusText}`);
+  }
+  
+  return await response.json();
 };

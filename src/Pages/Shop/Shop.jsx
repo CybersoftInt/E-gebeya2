@@ -10,7 +10,6 @@ function Shop() {
   return (
     <div>
         
-        <ManageProducts/>
         <ProductManager/>
     </div>
   )

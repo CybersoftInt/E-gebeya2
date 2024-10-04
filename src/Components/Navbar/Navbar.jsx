@@ -88,8 +88,8 @@ function Navbar() {
           {menu === "about" ? <hr /> : <></>}
         </li>
         <div className="adminICon"></div>{admin && (
-          <li onClick={() => navigate("/admin")}>
-            <span>admin</span>
+          <li onClick={() => navigate("/admin",setMenu("admin"))}>
+            <span style={{cursor: 'pointer'}}>Admin</span>
             {menu === "admin" ? <hr /> : <></>}
           </li>
         )}

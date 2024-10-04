@@ -149,3 +149,46 @@
     background: #DB4444;
     color: #fff;
 }
+
+
+
+
+
+  
+  .password {
+    margin-top: 20px;
+  }
+  
+  .password .pass {
+    margin-bottom: 10px;
+  }
+  
+
+  
+
+  
+  .addresses {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .address-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #ff44fa;
+    font-weight: bold;
+    align-items: row;
+    justify-self: center;
+  }
+  
+  .delete {
+    position:relative;
+    top: 0px;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
